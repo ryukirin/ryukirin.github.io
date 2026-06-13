@@ -11,7 +11,7 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/assets/css/site.css" />
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260613-5" />
   </head>
   <body>
     <header class="site-header">
@@ -33,7 +33,36 @@
           <h1>Blog</h1>
           <p>部分内容整理自博客园旧文，后续继续更新。</p>
         </div>
+        <form id="blog-filters" class="blog-filters" role="search">
+          <div class="blog-filter-grid">
+            <label class="blog-filter-field" for="blog-search">
+              <span>关键词</span>
+              <input id="blog-search" type="search" placeholder="标题或摘要" autocomplete="off" />
+            </label>
+            <label class="blog-filter-field" for="blog-tag-input">
+              <span>标签</span>
+              <div id="blog-tag-combobox" class="blog-tag-combobox">
+                <div id="blog-selected-tags" class="blog-selected-tags"></div>
+                <input
+                  id="blog-tag-input"
+                  type="text"
+                  placeholder="输入或选择标签"
+                  autocomplete="off"
+                  aria-controls="blog-tag-suggestions"
+                  aria-expanded="false"
+                />
+              </div>
+              <div id="blog-tag-suggestions" class="blog-tag-suggestions" role="listbox" hidden></div>
+            </label>
+            <div class="blog-filter-actions">
+              <button class="button button-primary" type="submit">筛选</button>
+              <button class="button button-secondary" id="blog-clear" type="button">清除</button>
+            </div>
+          </div>
+        </form>
+        <p id="blog-result-summary" class="blog-result-summary" aria-live="polite"></p>
         <div id="blog-list" class="post-list" aria-live="polite"></div>
+        <nav id="blog-pagination" class="blog-pagination" aria-label="博客分页"></nav>
       </div>
     </main>
 
@@ -49,7 +78,7 @@
     </button>
 
     <script src="/assets/js/posts.js?v=20260613-2"></script>
-    <script src="/assets/js/blog.js?v=20260613-2"></script>
+    <script src="/assets/js/blog.js?v=20260613-8"></script>
     <script src="/assets/js/back-to-top.js?v=20260613-2"></script>
   </body>
 </html>
