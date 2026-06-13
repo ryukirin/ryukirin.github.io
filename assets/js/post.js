@@ -39,7 +39,7 @@ function renderMissingPost() {
 }
 
 function stripFrontmatter(markdown) {
-  return markdown.replace(/^---\n[\s\S]*?\n---\n?/, "");
+  return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 }
 
 function buildTableOfContents() {
