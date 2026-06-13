@@ -1,3 +1,18 @@
-<!-- SPECKIT START -->
-如需了解将使用的技术、项目结构、Shell 命令和其他重要上下文，请先阅读当前计划：`specs/001-multilingual-blog/plan.md`
-<!-- SPECKIT END -->
+# Project Notes
+
+This repository is a plain static personal blog.
+
+- No framework or build step is required.
+- Entry page: `index.html`
+- Blog list: `blog/index.html`
+- Blog detail page: `blog/post.html?slug=<slug>`
+- Markdown posts live in `posts/`
+- Post metadata lives in `assets/js/posts.js`
+- Shared styles live in `assets/css/site.css`
+
+Preview locally with:
+
+```powershell
+python -m http.server 8000 --bind 127.0.0.1
+```
+
