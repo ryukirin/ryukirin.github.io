@@ -173,7 +173,7 @@ a:hover {
 }
 
 .focus-item,
-.comment-placeholder {
+.comments-setup {
   background: var(--color-surface);
   border: 1px solid var(--color-border);
   border-radius: 8px;
@@ -396,18 +396,38 @@ a:hover {
   max-width: 100%;
 }
 
-.comment-placeholder {
+.comments-section {
+  border-top: 1px solid var(--color-border);
   margin-top: 48px;
-  padding: 22px;
+  padding-top: 28px;
 }
 
-.comment-placeholder h2 {
-  font-size: 1.2rem;
+.comments-section h2 {
+  font-size: 1.35rem;
+  margin-bottom: 0.35rem;
 }
 
-.comment-placeholder p {
+.comments-section__note {
   color: var(--color-muted);
-  margin: 0;
+  margin-bottom: 1.25rem;
+}
+
+.comments-setup {
+  color: var(--color-muted);
+  display: grid;
+  gap: 0.45rem;
+  padding: 18px;
+}
+
+.comments-setup strong {
+  color: var(--color-text);
+}
+
+.comments-setup code {
+  background: var(--color-code-bg);
+  border-radius: 5px;
+  color: var(--color-text);
+  padding: 0.1rem 0.3rem;
 }
 
 .post-nav {
