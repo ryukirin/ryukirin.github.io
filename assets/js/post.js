@@ -1,10 +1,20 @@
 (async function () {
   const params = new URLSearchParams(window.location.search);
-  const slug = params.get("slug") || window.BLOG_POSTS[0]?.slug;
-  const meta = window.BLOG_POSTS.find((post) => post.slug === slug);
+  const lang = window.BLOG_I18N.getCurrentLang();
+  const language = window.BLOG_I18N.languages[lang];
+  const ui = language.ui;
+  const localizedPosts = window.BLOG_I18N
+    .getLocalizedPosts(window.BLOG_POSTS, lang)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
+  const slug = params.get("slug") || localizedPosts[0]?.slug;
+  const meta = localizedPosts.find((post) => post.slug === slug);
+
+  window.BLOG_I18N.setDocumentLanguage(lang);
+  window.BLOG_I18N.renderLanguageSwitcher(lang);
+  applyUiText(ui, lang);
 
   if (!meta) {
-    renderMissingPost();
+    renderMissingPost(ui);
     return;
   }
 
@@ -18,23 +28,33 @@
   renderPostNavigation(meta);
 
   try {
-    const response = await fetch(`/posts/${encodeURIComponent(slug)}.md`);
+    const response = await fetch(language.postPath(slug));
     if (!response.ok) throw new Error(`Failed to load ${slug}.md`);
     const markdown = await response.text();
     document.querySelector("#post-body").innerHTML = window.renderMarkdown(stripFrontmatter(markdown));
-    buildTableOfContents();
+    buildTableOfContents(ui);
     await renderEnhancements();
   } catch (error) {
     document.querySelector("#post-body").innerHTML = `
-      <p>文章 Markdown 加载失败。请确认通过本地静态服务器或 GitHub Pages 访问本站。</p>
+      <p>${escapeHtml(ui.loadingError)}</p>
     `;
     document.querySelector("#post-toc").innerHTML = "";
   }
 })();
 
-function renderMissingPost() {
-  document.querySelector("#post-title").textContent = "文章不存在";
-  document.querySelector("#post-body").innerHTML = '<p><a href="/blog/">返回博客列表</a></p>';
+function renderMissingPost(ui) {
+  const lang = window.BLOG_I18N.getCurrentLang();
+  document.title = `${ui.missingPostTitle} | Kylin`;
+  document.querySelector("#post-title").textContent = ui.missingPostTitle;
+  document.querySelector("#post-date").textContent = "";
+  document.querySelector("#post-tags").innerHTML = "";
+  document.querySelector("#post-body").innerHTML = `
+    <p>${escapeHtml(ui.missingPostBody)}</p>
+    <p><a href="${escapeHtml(window.BLOG_I18N.withLang("/blog/", lang))}">${escapeHtml(
+      ui.missingPostLink
+    )}</a></p>
+  `;
+  document.querySelector("#post-toc").innerHTML = "";
   document.querySelector(".post-nav")?.remove();
 }
 
@@ -42,13 +62,13 @@ function stripFrontmatter(markdown) {
   return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
 }
 
-function buildTableOfContents() {
+function buildTableOfContents(ui) {
   const body = document.querySelector("#post-body");
   const toc = document.querySelector("#post-toc");
   const headings = [...body.querySelectorAll("h2, h3")];
 
   if (!headings.length) {
-    toc.innerHTML = '<span class="text-muted">暂无目录</span>';
+    toc.innerHTML = `<span class="text-muted">${escapeHtml(ui.tocEmpty)}</span>`;
     return;
   }
 
@@ -89,7 +109,10 @@ function uniqueId(baseId, usedIds) {
 }
 
 function renderPostNavigation(currentPost) {
-  const posts = [...window.BLOG_POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const lang = window.BLOG_I18N.getCurrentLang();
+  const posts = window.BLOG_I18N
+    .getLocalizedPosts(window.BLOG_POSTS, lang)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
   const index = posts.findIndex((post) => post.slug === currentPost.slug);
   const prevPost = posts[index - 1];
   const nextPost = posts[index + 1];
@@ -104,12 +127,34 @@ function setPostNavItem(element, post) {
   if (!post) {
     element.classList.add("is-disabled");
     element.removeAttribute("href");
-    element.querySelector("strong").textContent = "没有了";
+    element.querySelector("strong").textContent =
+      window.BLOG_I18N.languages[window.BLOG_I18N.getCurrentLang()].ui.noMore;
     return;
   }
 
-  element.href = `/blog/post.html?slug=${encodeURIComponent(post.slug)}`;
+  element.href = window.BLOG_I18N.withLang(
+    `/blog/post.html?slug=${encodeURIComponent(post.slug)}`,
+    post.lang
+  );
   element.querySelector("strong").textContent = post.title;
+}
+
+function applyUiText(ui, lang) {
+  const backLink = document.querySelector(".back-link");
+  if (backLink) {
+    backLink.href = window.BLOG_I18N.withLang("/blog/", lang);
+    backLink.textContent = ui.backToBlog;
+  }
+
+  const tocTitle = document.querySelector(".article-toc__title");
+  if (tocTitle && lang !== "zh") tocTitle.textContent = "Contents";
+
+  const prevLabel = document.querySelector("#prev-post span");
+  const nextLabel = document.querySelector("#next-post span");
+  if (prevLabel) prevLabel.textContent = ui.prevPost;
+  if (nextLabel) nextLabel.textContent = ui.nextPost;
+
+  window.BLOG_I18N.syncLanguageLinks(lang);
 }
 
 async function renderEnhancements() {
@@ -175,7 +220,9 @@ function debounce(callback, wait) {
 }
 
 function formatDate(value) {
-  return new Intl.DateTimeFormat("zh-CN", {
+  const lang = window.BLOG_I18N?.getCurrentLang?.() || "zh";
+  const locale = window.BLOG_I18N?.languages?.[lang]?.locale || "zh-CN";
+  return new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",
