@@ -131,6 +131,8 @@ async function renderEnhancements() {
       ],
       throwOnError: false
     });
+    fitDisplayMath(body);
+    window.addEventListener("resize", debounce(() => fitDisplayMath(body), 120));
   }
 
   if (window.mermaid && body.querySelector(".mermaid")) {
@@ -143,6 +145,33 @@ async function renderEnhancements() {
       nodes: body.querySelectorAll(".mermaid")
     });
   }
+}
+
+function fitDisplayMath(root) {
+  root.querySelectorAll(".katex-display").forEach((display) => {
+    const math = display.querySelector(":scope > .katex");
+    if (!math) return;
+
+    display.style.fontSize = "";
+    display.classList.remove("is-scaled");
+
+    const availableWidth = display.clientWidth;
+    const formulaWidth = math.scrollWidth;
+    if (!availableWidth || formulaWidth <= availableWidth) return;
+
+    const scale = availableWidth / formulaWidth;
+    display.style.fontSize = `${scale * 100}%`;
+    display.classList.add("is-scaled");
+  });
+}
+
+function debounce(callback, wait) {
+  let timer = 0;
+
+  return function debouncedCallback() {
+    window.clearTimeout(timer);
+    timer = window.setTimeout(callback, wait);
+  };
 }
 
 function formatDate(value) {
