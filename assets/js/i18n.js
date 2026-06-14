@@ -32,7 +32,13 @@
         noMore: "没有了",
         backToBlog: "← Back to Blog",
         prevPost: "上一篇",
-        nextPost: "下一篇"
+        nextPost: "下一篇",
+        commentsTitle: "评论",
+        commentsNote: "使用 GitHub Discussions / Giscus。首次评论时需要登录 GitHub。",
+        giscusLang: "zh-CN",
+        giscusSetupTitle: "评论区已接入 Giscus，等待完成 GitHub 分类配置。",
+        giscusSetupBody: (category) =>
+          `请在 giscus.app 为 ryukirin/ryukirin.github.io 选择 ${category} 分类，并把生成的 data-category-id 填入 assets/js/giscus.js。`
       }
     },
     ja: {
@@ -67,7 +73,13 @@
         noMore: "ありません",
         backToBlog: "← Blogへ戻る",
         prevPost: "前の記事",
-        nextPost: "次の記事"
+        nextPost: "次の記事",
+        commentsTitle: "コメント",
+        commentsNote: "GitHub Discussions / Giscus を使用しています。初回コメント時は GitHub へのログインが必要です。",
+        giscusLang: "ja",
+        giscusSetupTitle: "コメント欄は Giscus に接続済みです。GitHub のカテゴリ設定待ちです。",
+        giscusSetupBody: (category) =>
+          `giscus.app で ryukirin/ryukirin.github.io の ${category} カテゴリを選択し、生成された data-category-id を assets/js/giscus.js に設定してください。`
       }
     },
     en: {
@@ -102,7 +114,13 @@
         noMore: "No more posts",
         backToBlog: "← Back to Blog",
         prevPost: "Previous post",
-        nextPost: "Next post"
+        nextPost: "Next post",
+        commentsTitle: "Comments",
+        commentsNote: "Comments are powered by GitHub Discussions / Giscus. You need to sign in to GitHub before commenting for the first time.",
+        giscusLang: "en",
+        giscusSetupTitle: "Giscus is connected, but the GitHub category setup is not complete yet.",
+        giscusSetupBody: (category) =>
+          `Open giscus.app, choose the ${category} category for ryukirin/ryukirin.github.io, and paste the generated data-category-id into assets/js/giscus.js.`
       }
     }
   };

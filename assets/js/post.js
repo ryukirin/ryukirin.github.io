@@ -154,6 +154,11 @@ function applyUiText(ui, lang) {
   if (prevLabel) prevLabel.textContent = ui.prevPost;
   if (nextLabel) nextLabel.textContent = ui.nextPost;
 
+  const commentsTitle = document.querySelector("#comments-title");
+  const commentsNote = document.querySelector(".comments-section__note");
+  if (commentsTitle) commentsTitle.textContent = ui.commentsTitle;
+  if (commentsNote) commentsNote.textContent = ui.commentsNote;
+
   window.BLOG_I18N.syncLanguageLinks(lang);
 }
 
