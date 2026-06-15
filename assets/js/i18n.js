@@ -19,7 +19,7 @@
         blogIntro: "部分内容整理自博客园旧文，后续继续更新。",
         latestPosts: "最近博客",
         summary: ({ total, page, pageCount, filterText }) =>
-          `共 ${total} 篇，当前第 ${page} / ${pageCount} 页${filterText}。`,
+          `共 ${total} 篇 当前第 ${page} / ${pageCount} 页${filterText}`,
         keywordFilter: (query) => `关键词“${query}”`,
         tagFilter: (tags) => `标签“${tags.join("、")}”`,
         previous: "上一页",
@@ -60,7 +60,7 @@
         blogIntro: "一部の記事は過去の cnblogs 記事を整理したものです。今後も更新していきます。",
         latestPosts: "最新記事",
         summary: ({ total, page, pageCount, filterText }) =>
-          `${total} 件、${page} / ${pageCount} ページ${filterText}。`,
+          `${total} 件 ${page} / ${pageCount} ページ${filterText}`,
         keywordFilter: (query) => `キーワード「${query}」`,
         tagFilter: (tags) => `タグ「${tags.join("、")}」`,
         previous: "前へ",
@@ -101,7 +101,7 @@
         blogIntro: "Some posts were reorganized from older cnblogs articles, with more updates to come.",
         latestPosts: "Latest Posts",
         summary: ({ total, page, pageCount, filterText }) =>
-          `${total} posts, page ${page} of ${pageCount}${filterText}.`,
+          `${total} posts  page ${page} of ${pageCount}${filterText}`,
         keywordFilter: (query) => `keyword "${query}"`,
         tagFilter: (tags) => `tags "${tags.join(", ")}"`,
         previous: "Previous",
@@ -180,9 +180,8 @@
       .map((key) => {
         const href = withLang(window.location.href, key);
         const isActive = key === lang;
-        return `<a href="${escapeHtml(href)}" class="${isActive ? "is-active" : ""}" ${
-          isActive ? 'aria-current="true"' : ""
-        }>${escapeHtml(languages[key].label)}</a>`;
+        return `<a href="${escapeHtml(href)}" class="${isActive ? "is-active" : ""}" ${isActive ? 'aria-current="true"' : ""
+          }>${escapeHtml(languages[key].label)}</a>`;
       })
       .join("");
 

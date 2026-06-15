@@ -18,6 +18,15 @@ window.BLOG_POSTS = [
           "LangChain",
           "ChatGPT"
         ]
+      },
+      "ja": {
+        "title": "LangChain で fine-tuned GPT-3.5 を使う",
+        "description": "GPT-3.5 の fine-tuning データ準備、検証、token 見積もり、fine-tuning job 作成、fine-tuned model の呼び出し、LangChain からの利用までを整理する。",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
       }
     }
   },
@@ -34,6 +43,14 @@ window.BLOG_POSTS = [
       "en": {
         "title": "Leetcode Solution Report Day 3-4",
         "description": "Leetcode practice notes for Day 3 and Day 4, covering Plus One, Find Pivot Index, Rotate Array, Rotate Image, Spiral Matrix, and Diagonal Traverse.",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "【Leetcode】解法レポート Day3~Day4",
+        "description": "LeetCode 練習メモ Day3~Day4。Plus One、Pivot Index、Rotate Array、Rotate Image、Spiral Matrix、Diagonal Traverse を解き、配列と行列の添字処理を整理する。",
         "tags": [
           "Leetcode",
           "Datawhale"
@@ -58,6 +75,14 @@ window.BLOG_POSTS = [
           "Leetcode",
           "Datawhale"
         ]
+      },
+      "ja": {
+        "title": "【Leetcode】解法レポート Day1~Day2",
+        "description": "LeetCode 練習メモ Day1~Day2。Two Sum、配列の連結、Jewels and Stones、Running Sum、小文字変換、最富裕顧客の資産総額を解き、Python の組み込み関数や生成器式も整理する。",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
       }
     }
   },
@@ -76,6 +101,14 @@ window.BLOG_POSTS = [
         "description": "Study notes on JavaScript basics: browser execution, variables, data types, type conversion, operators, control flow, loops, arrays, sorting, and functions.",
         "tags": [
           "Frontend",
+          "JS"
+        ]
+      },
+      "ja": {
+        "title": "【JS】JavaScript メモ",
+        "description": "JavaScript の学習メモ。ブラウザでの実行、変数、データ型、型変換、演算子、制御フロー、ループ、配列、バブルソート、関数を整理する。",
+        "tags": [
+          "フロントエンド",
           "JS"
         ]
       }
@@ -98,6 +131,14 @@ window.BLOG_POSTS = [
           "Frontend",
           "CSS"
         ]
+      },
+      "ja": {
+        "title": "【CSS】CSS メモ",
+        "description": "CSS の学習メモ。セレクタ、フォント、テキスト、導入方式、複合セレクタ、表示モード、背景、三大特性、ボックスモデル、float、Photoshop 切り出し、レイアウト、position、表示・非表示を整理する。",
+        "tags": [
+          "フロントエンド",
+          "CSS"
+        ]
       }
     }
   },
@@ -118,6 +159,14 @@ window.BLOG_POSTS = [
           "Frontend",
           "HTML"
         ]
+      },
+      "ja": {
+        "title": "【HTML】HTML メモ",
+        "description": "HTML の学習メモ。Web ページの基本概念、ブラウザエンジン、Web 標準、HTML タグ、文書構造、リンク、表、リスト、フォームまでを整理する。",
+        "tags": [
+          "フロントエンド",
+          "HTML"
+        ]
       }
     }
   },
@@ -133,6 +182,13 @@ window.BLOG_POSTS = [
       "en": {
         "title": "[Java] Relearning Java from scratch day 8",
         "description": "Study notes on Java array sorting algorithms: bubble sort, selection sort, reverse sorting, sorting implementations, and array exercises.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day8",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day8。配列のソートアルゴリズム、バブルソート、直接選択ソート、反転ソート、配列操作の練習を整理する。",
         "tags": [
           "Java"
         ]
@@ -154,6 +210,13 @@ window.BLOG_POSTS = [
         "tags": [
           "Java"
         ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day7",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day7。配列の概要、一次元配列、二次元配列、Arrays クラスによる基本操作を整理する。",
+        "tags": [
+          "Java"
+        ]
       }
     }
   },
@@ -172,6 +235,13 @@ window.BLOG_POSTS = [
         "tags": [
           "Java"
         ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day6",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day6。文字列フォーマット、日時フォーマット、正規表現、StringBuilder、練習問題を整理する。",
+        "tags": [
+          "Java"
+        ]
       }
     }
   },
@@ -187,6 +257,13 @@ window.BLOG_POSTS = [
       "en": {
         "title": "[Java] Relearning Java from scratch day 5",
         "description": "Study notes on Java strings: getting string information, length, indexOf, lastIndexOf, charAt, substring, trim, replace, startsWith, endsWith, equals, compareTo, case conversion, and split.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day5",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day5。String の長さ取得、検索、charAt、substring、trim、replace、startsWith/endsWith、equals、compareTo、大小文字変換、split を整理する。",
         "tags": [
           "Java"
         ]
@@ -307,6 +384,15 @@ window.BLOG_POSTS = [
       "en": {
         "title": "LangChain: How to Create a Custom Memory Class",
         "description": "A translated and extended note on implementing a custom LangChain Memory class, including a spaCy entity memory example and a custom recent-conversation memory for JSON responses.",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
+      },
+      "ja": {
+        "title": "【LangChain】How to create a custom Memory class 自作 Memory クラスを作る",
+        "description": "LangChain の custom Memory class 実装メモ。spaCy を使った Entity Memory の例と、JSON 応答の reply だけを保持する RecentKConversationMemory の自作例を整理する。",
         "tags": [
           "LLM",
           "LangChain",
@@ -520,6 +606,13 @@ window.BLOG_POSTS = [
         "tags": [
           "Paper Notes"
         ]
+      },
+      "ja": {
+        "title": "【論文メモ】Emotional Chatting Machine",
+        "description": "Emotional Chatting Machine の論文メモ。背景、ECM の三つの機構、感情カテゴリ埋め込み、内部記憶、外部記憶、実験設定、評価結果、今後の課題を整理する。",
+        "tags": [
+          "論文メモ"
+        ]
       }
     }
   },
@@ -530,16 +623,7 @@ window.BLOG_POSTS = [
     "date": "2021-11-20T22:39:00+08:00",
     "tags": [
       "论文翻译"
-    ],
-    "translations": {
-      "en": {
-        "title": "Paper Translation: Emotional Chatting Machine: Emotional Conversation Generation with Internal and External Memory",
-        "description": "A technical-blog-style English translation of the Emotional Chatting Machine paper notes, covering emotion category embedding, internal memory, external memory, data preparation, and evaluation.",
-        "tags": [
-          "Paper Translation"
-        ]
-      }
-    }
+    ]
   },
   {
     "slug": "cnblogs-15557430",
@@ -548,16 +632,7 @@ window.BLOG_POSTS = [
     "date": "2021-11-15T17:37:00+08:00",
     "tags": [
       "论文翻译"
-    ],
-    "translations": {
-      "en": {
-        "title": "Paper Translation: DialogueRNN: An Attentive RNN for Emotion Detection in Conversations",
-        "description": "A technical-blog-style English translation of the DialogueRNN paper notes, covering the model architecture, speaker state, global state, emotion GRU, experiments, and analysis.",
-        "tags": [
-          "Paper Translation"
-        ]
-      }
-    }
+    ]
   },
   {
     "slug": "cnblogs-15491579",
@@ -576,6 +651,15 @@ window.BLOG_POSTS = [
         "tags": [
           "Watermelon Book | Datawhale October",
           "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（5）",
+        "description": "西瓜书・吃瓜教程の学習メモ。支持ベクトルマシンを幾何学的な観点から整理し、超平面、幾何マージン、制約付き最適化、ハードマージン SVM の定式化までをまとめる。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
           "Datawhale"
         ]
       }
@@ -600,6 +684,15 @@ window.BLOG_POSTS = [
           "Watermelon Book",
           "Datawhale"
         ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（4）",
+        "description": "西瓜书・吃瓜教程の学習メモ。ニューラルネットワーク、M-P ニューロン、パーセプトロン、多層フィードフォワードネットワーク、誤差逆伝播、深層学習を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
       }
     }
   },
@@ -620,6 +713,15 @@ window.BLOG_POSTS = [
         "tags": [
           "Watermelon Book | Datawhale October",
           "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（3）",
+        "description": "西瓜书・吃瓜教程の学習メモ。決定木の基本フロー、情報エントロピー、情報利得、ID3、C4.5、CART、剪定、連続値・欠損値処理、多変量決定木を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
           "Datawhale"
         ]
       }
@@ -644,6 +746,15 @@ window.BLOG_POSTS = [
           "Watermelon Book",
           "Datawhale"
         ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（2）",
+        "description": "西瓜书・吃瓜教程の学習メモ。機械学習の三要素、線形モデル、線形回帰、ロジスティック回帰、最尤推定、情報論、線形判別分析、Lagrange 乗数法、一般化 Rayleigh 商を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
       }
     }
   },
@@ -654,16 +765,7 @@ window.BLOG_POSTS = [
     "date": "2021-09-15T13:20:00+08:00",
     "tags": [
       "论文翻译"
-    ],
-    "translations": {
-      "en": {
-        "title": "Paper Translation: DialogueCRN: Contextual Reasoning Networks for Emotion Recognition in Conversations",
-        "description": "A technical-blog-style English translation of DialogueCRN notes, covering perception, cognition, multi-turn reasoning, experiments, ablation studies, and related work.",
-        "tags": [
-          "Paper Translation"
-        ]
-      }
-    }
+    ]
   },
   {
     "slug": "cnblogs-15262597",
@@ -682,6 +784,15 @@ window.BLOG_POSTS = [
         "tags": [
           "Watermelon Book | Datawhale September",
           "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 9月（1）",
+        "description": "西瓜书・吃瓜教程の学習メモ。機械学習の基本用語、仮説空間、帰納バイアス、モデル評価、過学習、評価方法、検証集合、性能指標、適合率・再現率・F1 を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 9月",
+          "西瓜书",
           "Datawhale"
         ]
       }
@@ -706,6 +817,15 @@ window.BLOG_POSTS = [
           "Math",
           "Datawhale"
         ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（5）メモ",
+        "description": "機械学習の数学基礎メモ。中値定理、有界性と最大最小定理、介値定理、平均値定理、零点定理、Fermat、Rolle、Lagrange、Cauchy の中値定理、Taylor 公式を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
       }
     }
   },
@@ -726,6 +846,15 @@ window.BLOG_POSTS = [
         "tags": [
           "Mathematical Foundations of Machine Learning | Datawhale August",
           "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（4）メモ",
+        "description": "機械学習の数学基礎メモ。一変数関数の微分学の幾何学的応用、極値と最大最小、単調性、凹凸性、変曲点、漸近線、値域を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
           "Datawhale"
         ]
       }
@@ -750,6 +879,15 @@ window.BLOG_POSTS = [
           "Math",
           "Datawhale"
         ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（3）メモ",
+        "description": "機械学習の数学基礎メモ。一変数関数の微分学、導数、微分、四則演算、分段関数、合成関数、逆関数、陰関数、対数微分、高階導数、Taylor 公式を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
       }
     }
   },
@@ -770,6 +908,15 @@ window.BLOG_POSTS = [
         "tags": [
           "Mathematical Foundations of Machine Learning | Datawhale August",
           "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 | Datawhale 8月（2）メモ",
+        "description": "機械学習の数学基礎メモ。数列の極限、部分列、収束数列の性質、極限の演算法則、はさみうちの原理、単調有界定理を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
           "Datawhale"
         ]
       }
@@ -793,6 +940,15 @@ window.BLOG_POSTS = [
           "Mathematical Foundations of Machine Learning | Datawhale August",
           "Datawhale",
           "Math"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 | Datawhale 8月（1）メモ",
+        "description": "機械学習の数学基礎メモ。高等数学の準備知識、逆関数、関数の四つの性質、代表的な関数、数列公式、三角関数、関数の極限と連続性を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "Datawhale",
+          "数学"
         ]
       }
     }
