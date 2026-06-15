@@ -12,13 +12,21 @@
 
   if (!listRoot) return;
 
-  const posts = [...window.BLOG_POSTS].sort((a, b) => new Date(b.date) - new Date(a.date));
+  const lang = window.BLOG_I18N.getCurrentLang();
+  const language = window.BLOG_I18N.languages[lang];
+  const ui = language.ui;
+  const posts = window.BLOG_I18N
+    .getLocalizedPosts(window.BLOG_POSTS, lang)
+    .sort((a, b) => new Date(b.date) - new Date(a.date));
   const allTags = [...new Set(posts.flatMap((post) => post.tags))].sort((a, b) =>
-    a.localeCompare(b, "zh-CN")
+    a.localeCompare(b, language.locale)
   );
   const pageSize = 10;
   const state = readStateFromUrl(allTags);
 
+  window.BLOG_I18N.setDocumentLanguage(lang);
+  window.BLOG_I18N.renderLanguageSwitcher(lang);
+  applyUiText();
   searchInput.value = state.query;
   renderSelectedTags(state.tags);
   renderSuggestions("");
@@ -142,7 +150,7 @@
 
     listRoot.innerHTML = pagePosts.length
       ? pagePosts.map(renderPostCard).join("")
-      : '<p class="empty-state">没有找到符合条件的文章。</p>';
+      : `<p class="empty-state">${escapeHtml(ui.noPosts)}</p>`;
 
     renderSummary(filteredPosts.length, pageCount);
     renderPagination(pageCount);
@@ -176,7 +184,7 @@
         `
       )
       .join("");
-    tagInput.placeholder = tags.length ? "" : "输入或选择标签";
+    tagInput.placeholder = tags.length ? "" : ui.tagPlaceholder;
   }
 
   function renderSuggestions(value) {
@@ -190,7 +198,7 @@
       ? options
           .map((tag) => `<button type="button" role="option" data-tag="${escapeHtml(tag)}">${escapeHtml(tag)}</button>`)
           .join("")
-      : '<span class="blog-tag-suggestions__empty">没有匹配的标签</span>';
+      : `<span class="blog-tag-suggestions__empty">${escapeHtml(ui.noTags)}</span>`;
   }
 
   function addTag(tag) {
@@ -218,11 +226,23 @@
 
   function renderSummary(total, pageCount) {
     const filterParts = [];
-    if (state.query) filterParts.push(`关键词“${state.query}”`);
-    if (state.tags.length) filterParts.push(`标签“${state.tags.join("、")}”`);
-    const filterText = filterParts.length ? `，已筛选：${filterParts.join("，")}` : "";
+    if (state.query) filterParts.push(ui.keywordFilter(state.query));
+    if (state.tags.length) filterParts.push(ui.tagFilter(state.tags));
+    const filterText =
+      filterParts.length && lang === "en"
+        ? `, filtered by ${filterParts.join(", ")}`
+        : filterParts.length && lang === "ja"
+          ? `、絞り込み：${filterParts.join("、")}`
+        : filterParts.length
+          ? `，已筛选：${filterParts.join("，")}`
+          : "";
 
-    summaryRoot.textContent = `共 ${total} 篇，当前第 ${state.page} / ${pageCount} 页${filterText}。`;
+    summaryRoot.textContent = ui.summary({
+      total,
+      page: state.page,
+      pageCount,
+      filterText
+    });
   }
 
   function renderPagination(pageCount) {
@@ -236,7 +256,9 @@
     const nextPage = Math.min(pageCount, state.page + 1);
 
     paginationRoot.innerHTML = `
-      <button type="button" data-page="${previousPage}" ${state.page === 1 ? "disabled" : ""}>上一页</button>
+      <button type="button" data-page="${previousPage}" ${state.page === 1 ? "disabled" : ""}>${escapeHtml(
+        ui.previous
+      )}</button>
       ${pages
         .map((page) =>
           page === "..."
@@ -246,7 +268,9 @@
               }" aria-current="${page === state.page ? "page" : "false"}">${page}</button>`
         )
         .join("")}
-      <button type="button" data-page="${nextPage}" ${state.page === pageCount ? "disabled" : ""}>下一页</button>
+      <button type="button" data-page="${nextPage}" ${state.page === pageCount ? "disabled" : ""}>${escapeHtml(
+        ui.next
+      )}</button>
     `;
   }
 
@@ -258,6 +282,26 @@
   function hideSuggestions() {
     tagSuggestionsRoot.hidden = true;
     tagInput.setAttribute("aria-expanded", "false");
+  }
+
+  function applyUiText() {
+    document.title = lang === "zh" ? "Blog | Kylin" : `${language.label} Blog | Kylin`;
+    document
+      .querySelector('meta[name="description"]')
+      ?.setAttribute("content", lang === "zh" ? "Kylin 的博客文章列表。" : `Kylin's ${language.label} blog posts.`);
+
+    const searchLabel = document.querySelector('label[for="blog-search"] span');
+    const tagLabel = document.querySelector('label[for="blog-tag-input"] span');
+    const intro = document.querySelector(".page-heading p:not(.eyebrow)");
+    if (searchLabel) searchLabel.textContent = ui.searchKeyword;
+    if (tagLabel) tagLabel.textContent = ui.tags;
+    if (intro) intro.textContent = ui.blogIntro;
+    searchInput.placeholder = ui.searchPlaceholder;
+    tagInput.placeholder = ui.tagPlaceholder;
+    filterForm.querySelector('button[type="submit"]').textContent = ui.filter;
+    clearButton.textContent = ui.clear;
+
+    window.BLOG_I18N.syncLanguageLinks(lang);
   }
 })();
 
@@ -279,7 +323,9 @@ function readStateFromUrl(allTags) {
 
 function updateUrl(state) {
   const params = new URLSearchParams();
+  const lang = window.BLOG_I18N.getCurrentLang();
 
+  if (lang !== window.BLOG_I18N.defaultLang) params.set("lang", lang);
   if (state.query) params.set("q", state.query);
   state.tags.forEach((tag) => params.append("tag", tag));
   if (state.page > 1) params.set("page", String(state.page));
@@ -305,8 +351,13 @@ function getVisiblePages(currentPage, pageCount) {
 
 function renderPostCard(post) {
   const tags = post.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
+  const lang = window.BLOG_I18N.getCurrentLang();
+  const url = window.BLOG_I18N.withLang(
+    `/blog/post.html?slug=${encodeURIComponent(post.slug)}`,
+    lang
+  );
   return `
-    <a class="post-card" href="/blog/post.html?slug=${encodeURIComponent(post.slug)}">
+    <a class="post-card" href="${escapeHtml(url)}">
       <div class="post-meta">${formatDate(post.date)}</div>
       <h3>${escapeHtml(post.title)}</h3>
       <p>${escapeHtml(post.description)}</p>
@@ -316,11 +367,15 @@ function renderPostCard(post) {
 }
 
 function normalizeText(value) {
-  return String(value).trim().toLocaleLowerCase("zh-CN");
+  const lang = window.BLOG_I18N?.getCurrentLang?.() || "zh";
+  const locale = window.BLOG_I18N?.languages?.[lang]?.locale || "zh-CN";
+  return String(value).trim().toLocaleLowerCase(locale);
 }
 
 function formatDate(value) {
-  return new Intl.DateTimeFormat("zh-CN", {
+  const lang = window.BLOG_I18N?.getCurrentLang?.() || "zh";
+  const locale = window.BLOG_I18N?.languages?.[lang]?.locale || "zh-CN";
+  return new Intl.DateTimeFormat(locale, {
     year: "numeric",
     month: "long",
     day: "numeric",

@@ -8,7 +8,27 @@ window.BLOG_POSTS = [
       "LLM",
       "LangChain",
       "ChatGPT"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Using Fine-Tuned GPT-3.5 with LangChain",
+        "description": "A walkthrough for preparing fine-tuning data, validating it, creating a fine-tuning job, using the resulting model, and calling it from LangChain.",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
+      },
+      "ja": {
+        "title": "LangChain で fine-tuned GPT-3.5 を使う",
+        "description": "GPT-3.5 の fine-tuning データ準備、検証、token 見積もり、fine-tuning job 作成、fine-tuned model の呼び出し、LangChain からの利用までを整理する。",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17703908",
@@ -18,7 +38,25 @@ window.BLOG_POSTS = [
     "tags": [
       "Leetcode",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Leetcode Solution Report Day 3-4",
+        "description": "Leetcode practice notes for Day 3 and Day 4, covering Plus One, Find Pivot Index, Rotate Array, Rotate Image, Spiral Matrix, and Diagonal Traverse.",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "【Leetcode】解法レポート Day3~Day4",
+        "description": "LeetCode 練習メモ Day3~Day4。Plus One、Pivot Index、Rotate Array、Rotate Image、Spiral Matrix、Diagonal Traverse を解き、配列と行列の添字処理を整理する。",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17697267",
@@ -28,7 +66,25 @@ window.BLOG_POSTS = [
     "tags": [
       "Leetcode",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Leetcode Solution Report Day 1-2",
+        "description": "Leetcode practice notes for Day 1 and Day 2, covering simple array, string, and hash-set problems, plus reflections on Python syntax and built-in functions.",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "【Leetcode】解法レポート Day1~Day2",
+        "description": "LeetCode 練習メモ Day1~Day2。Two Sum、配列の連結、Jewels and Stones、Running Sum、小文字変換、最富裕顧客の資産総額を解き、Python の組み込み関数や生成器式も整理する。",
+        "tags": [
+          "Leetcode",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17681162",
@@ -38,7 +94,25 @@ window.BLOG_POSTS = [
     "tags": [
       "前端",
       "JS"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "JavaScript Notes",
+        "description": "Study notes on JavaScript basics: browser execution, variables, data types, type conversion, operators, control flow, loops, arrays, sorting, and functions.",
+        "tags": [
+          "Frontend",
+          "JS"
+        ]
+      },
+      "ja": {
+        "title": "【JS】JavaScript メモ",
+        "description": "JavaScript の学習メモ。ブラウザでの実行、変数、データ型、型変換、演算子、制御フロー、ループ、配列、バブルソート、関数を整理する。",
+        "tags": [
+          "フロントエンド",
+          "JS"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17681160",
@@ -48,7 +122,25 @@ window.BLOG_POSTS = [
     "tags": [
       "前端",
       "CSS"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "CSS Notes",
+        "description": "Study notes on CSS basics: selectors, fonts, text styles, inclusion methods, compound selectors, display modes, backgrounds, cascade, box model, float, positioning, and page layout.",
+        "tags": [
+          "Frontend",
+          "CSS"
+        ]
+      },
+      "ja": {
+        "title": "【CSS】CSS メモ",
+        "description": "CSS の学習メモ。セレクタ、フォント、テキスト、導入方式、複合セレクタ、表示モード、背景、三大特性、ボックスモデル、float、Photoshop 切り出し、レイアウト、position、表示・非表示を整理する。",
+        "tags": [
+          "フロントエンド",
+          "CSS"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17681155",
@@ -58,7 +150,25 @@ window.BLOG_POSTS = [
     "tags": [
       "前端",
       "HTML"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "HTML Notes",
+        "description": "Study notes on basic HTML concepts, browser engines, web standards, tags, document structure, links, tables, lists, and forms.",
+        "tags": [
+          "Frontend",
+          "HTML"
+        ]
+      },
+      "ja": {
+        "title": "【HTML】HTML メモ",
+        "description": "HTML の学習メモ。Web ページの基本概念、ブラウザエンジン、Web 標準、HTML タグ、文書構造、リンク、表、リスト、フォームまでを整理する。",
+        "tags": [
+          "フロントエンド",
+          "HTML"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17635884",
@@ -67,7 +177,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-16T18:07:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 8",
+        "description": "Study notes on Java array sorting algorithms: bubble sort, selection sort, reverse sorting, sorting implementations, and array exercises.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day8",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day8。配列のソートアルゴリズム、バブルソート、直接選択ソート、反転ソート、配列操作の練習を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17632136",
@@ -76,7 +202,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-15T18:29:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 7",
+        "description": "Study notes on Java arrays: one-dimensional arrays, two-dimensional arrays, initialization, traversal, Arrays.fill, Arrays.sort, Arrays.copyOf, Arrays.copyOfRange, and Arrays.binarySearch.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day7",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day7。配列の概要、一次元配列、二次元配列、Arrays クラスによる基本操作を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17629913",
@@ -85,7 +227,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-14T22:03:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 6",
+        "description": "Study notes on Java strings: string formatting, date and time formatting, common format specifiers, regular expressions, StringBuilder, and small exercises.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day6",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day6。文字列フォーマット、日時フォーマット、正規表現、StringBuilder、練習問題を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17624107",
@@ -94,7 +252,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-11T23:01:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 5",
+        "description": "Study notes on Java strings: getting string information, length, indexOf, lastIndexOf, charAt, substring, trim, replace, startsWith, endsWith, equals, compareTo, case conversion, and split.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day5",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day5。String の長さ取得、検索、charAt、substring、trim、replace、startsWith/endsWith、equals、compareTo、大小文字変換、split を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17621856",
@@ -103,7 +277,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-10T23:05:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 4",
+        "description": "Study notes on Java flow-control exercises and the String class: diamond printing, factorial series with while, declaring strings, constructing strings, and string concatenation.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day4",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day4。フロー制御の練習問題、String クラス、文字列の作成と連結を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17612956",
@@ -112,7 +302,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-07T22:42:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 3",
+        "description": "Study notes on Java flow control: compound statements, if statements, if-else, switch, while, do-while, for, foreach, break, continue, and labeled loops.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day3",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day3。複合文、条件文、switch、多分岐、while/do-while/for/foreach、break と continue を整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17612508",
@@ -121,7 +327,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-07T19:20:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 2",
+        "description": "Study notes on Java operators, assignment, arithmetic operators, increment and decrement, logical operators, bitwise operators, ternary operators, operator precedence, type conversion, documentation comments, and small exercises.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day2",
+        "description": "『Java从入门到精通』を使った Java 復習メモ day2。演算子、型変換、ドキュメントコメント、簡単なテストコードを整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17610317",
@@ -130,7 +352,23 @@ window.BLOG_POSTS = [
     "date": "2023-08-06T23:04:00+08:00",
     "tags": [
       "Java"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Java] Relearning Java from scratch day 1",
+        "description": "Study notes from Java from Beginner to Master: Java main class structure, package declarations, imports, classes, member variables, local variables, main method, basic data types, constants, variables, scopes, and sample code.",
+        "tags": [
+          "Java"
+        ]
+      },
+      "ja": {
+        "title": "【Java】ゼロから始める Java リハビリ day1",
+        "description": "『Java从入门到精通』を使った Java 復習メモ。Java の主クラス構造、基本データ型、定数と変数、変数のスコープを整理する。",
+        "tags": [
+          "Java"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17562519",
@@ -141,7 +379,27 @@ window.BLOG_POSTS = [
       "LLM",
       "LangChain",
       "ChatGPT"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "LangChain: How to Create a Custom Memory Class",
+        "description": "A translated and extended note on implementing a custom LangChain Memory class, including a spaCy entity memory example and a custom recent-conversation memory for JSON responses.",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
+      },
+      "ja": {
+        "title": "【LangChain】How to create a custom Memory class 自作 Memory クラスを作る",
+        "description": "LangChain の custom Memory class 実装メモ。spaCy を使った Entity Memory の例と、JSON 応答の reply だけを保持する RecentKConversationMemory の自作例を整理する。",
+        "tags": [
+          "LLM",
+          "LangChain",
+          "ChatGPT"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17372835",
@@ -150,7 +408,16 @@ window.BLOG_POSTS = [
     "date": "2023-05-04T23:01:00+08:00",
     "tags": [
       "统计数据分析专论"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Statistics Seminar 02: Regularization",
+        "description": "Lecture translation and notes on nonlinear basis-function regression, Gaussian basis functions, overfitting, ridge regression, and the bias-variance tradeoff.",
+        "tags": [
+          "Statistical Data Analysis Seminar"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17369306",
@@ -159,7 +426,16 @@ window.BLOG_POSTS = [
     "date": "2023-05-03T16:55:00+08:00",
     "tags": [
       "统计数据分析专论"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Statistics Seminar 01: Revisiting Linear Regression",
+        "description": "Lecture translation and notes on linear regression, least-squares estimation, bias, variance, the Gauss-Markov theorem, and exercises.",
+        "tags": [
+          "Statistical Data Analysis Seminar"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17351474",
@@ -169,7 +445,17 @@ window.BLOG_POSTS = [
     "tags": [
       "论文笔记",
       "ChatGPT"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Paper Notes] A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT",
+        "description": "Notes on the paper A Prompt Pattern Catalog to Enhance Prompt Engineering with ChatGPT, covering 16 prompt patterns with examples.",
+        "tags": [
+          "Paper Notes",
+          "ChatGPT"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-17066047",
@@ -178,7 +464,23 @@ window.BLOG_POSTS = [
     "date": "2023-01-24T13:55:00+08:00",
     "tags": [
       "Neo4j"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Operating Neo4j with py2neo",
+        "description": "Notes on installing Java 17 and Neo4j, connecting from Python with py2neo, and basic CRUD operations for nodes, relationships, labels, and properties.",
+        "tags": [
+          "Neo4j"
+        ]
+      },
+      "ja": {
+        "title": "py2neo で Neo4j を操作する",
+        "description": "py2neo を使って Neo4j を操作するメモ。Java 17 と Neo4j のインストール、Python ドライバ、ノードとリレーションの CRUD 操作を整理する。",
+        "tags": [
+          "Neo4j"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-16640736",
@@ -187,7 +489,23 @@ window.BLOG_POSTS = [
     "date": "2022-08-30T20:36:00+08:00",
     "tags": [
       "Colaboratory"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Running GitHub code on Colab: failed attempt",
+        "description": "A failed but documented attempt to run the Emotional Chatting Machine code on Colab, including Python 3.5 setup, NumPy installation, CUDA 8.0, TensorFlow 1.0.1, and the final missing-file error.",
+        "tags": [
+          "Colaboratory"
+        ]
+      },
+      "ja": {
+        "title": "GitHub のコードを Colab で実行した記録（失敗）",
+        "description": "Emotional Chatting Machine の GitHub コードを Colab で動かそうとした記録。Python 3.5、TensorFlow 1.0.1、CUDA 8.0 の環境構築まではできたが、ファイル不足で実行は失敗した。",
+        "tags": [
+          "Colaboratory"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15723167",
@@ -197,7 +515,25 @@ window.BLOG_POSTS = [
     "tags": [
       "Linux组队学习",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Datawhale Linux Group Study Tasks 8-10",
+        "description": "Notes for Datawhale Linux group study tasks 8-10: filtering text with grep and awk, editing streams with sed, creating zip and tar archives, extracting compressed files, and locating files with find and locate.",
+        "tags": [
+          "Linux Group Study",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Datawhale | Linux グループ学習 タスク 8-10",
+        "description": "Datawhale Linux グループ学習タスク 8-10。grep、awk、sed、zip、tar、find、locate を使った文字列抽出、圧縮、ファイル検索の作業記録。",
+        "tags": [
+          "Linuxグループ学習",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15721244",
@@ -207,7 +543,25 @@ window.BLOG_POSTS = [
     "tags": [
       "Linux组队学习",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Datawhale Linux Group Study Tasks 5-7",
+        "description": "Notes for Datawhale Linux group study tasks 5-7: creating and running Python files, using os and sys, modular Python imports, reading affairs.txt, running programs in the background, nohup, jobs, tmux, and process management.",
+        "tags": [
+          "Linux Group Study",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Datawhale | Linux グループ学習 タスク 5-7",
+        "description": "Datawhale Linux グループ学習タスク 5-7。Python の os/sys、モジュール化、バックグラウンド実行、ログ出力、tmux の使用についての作業記録。",
+        "tags": [
+          "Linuxグループ学習",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15687221",
@@ -217,7 +571,25 @@ window.BLOG_POSTS = [
     "tags": [
       "Linux组队学习",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Datawhale Linux Group Study Tasks 1-4",
+        "description": "Notes for Datawhale Linux group study tasks 1-4: logging in to a specified Linux environment, creating and deleting directories, Linux directory structure, file and directory management, downloading and reading files, and editing files with Nano or Vim.",
+        "tags": [
+          "Linux Group Study",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Linux グループ学習 | Datawhale タスク 1-4",
+        "description": "Datawhale Linux グループ学習タスク 1-4。指定 Linux 環境へのログイン、ディレクトリ作成・削除、ファイルダウンロードと閲覧、vi/vim での編集を記録する。",
+        "tags": [
+          "Linuxグループ学習",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15591030",
@@ -226,7 +598,23 @@ window.BLOG_POSTS = [
     "date": "2021-11-22T23:20:00+08:00",
     "tags": [
       "论文笔记"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Paper Notes] Emotional Chatting Machine",
+        "description": "Paper notes on Emotional Chatting Machine: background, model design, emotion category embedding, internal emotion memory, external memory, experiments, automatic and human evaluation, case study, and future work.",
+        "tags": [
+          "Paper Notes"
+        ]
+      },
+      "ja": {
+        "title": "【論文メモ】Emotional Chatting Machine",
+        "description": "Emotional Chatting Machine の論文メモ。背景、ECM の三つの機構、感情カテゴリ埋め込み、内部記憶、外部記憶、実験設定、評価結果、今後の課題を整理する。",
+        "tags": [
+          "論文メモ"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15582908",
@@ -255,7 +643,27 @@ window.BLOG_POSTS = [
       "吃瓜教程|Datawhale-10月",
       "西瓜书",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Watermelon Book | Datawhale October (5)",
+        "description": "Notes on support vector machines: hyperplanes, geometric margin, the SVM optimization objective, margin maximization, constrained optimization, and a short note on soft margins.",
+        "tags": [
+          "Watermelon Book | Datawhale October",
+          "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（5）",
+        "description": "西瓜书・吃瓜教程の学習メモ。支持ベクトルマシンを幾何学的な観点から整理し、超平面、幾何マージン、制約付き最適化、ハードマージン SVM の定式化までをまとめる。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15473679",
@@ -266,7 +674,27 @@ window.BLOG_POSTS = [
       "吃瓜教程|Datawhale-10月",
       "西瓜书",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Watermelon Book | Datawhale October (4)",
+        "description": "Notes on neural networks: the M-P neuron model, perceptrons, multilayer networks, perceptron learning strategy, multilayer feedforward neural networks, backpropagation, and deep learning.",
+        "tags": [
+          "Watermelon Book | Datawhale October",
+          "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（4）",
+        "description": "西瓜书・吃瓜教程の学習メモ。ニューラルネットワーク、M-P ニューロン、パーセプトロン、多層フィードフォワードネットワーク、誤差逆伝播、深層学習を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15452414",
@@ -277,7 +705,27 @@ window.BLOG_POSTS = [
       "吃瓜教程|Datawhale-10月",
       "西瓜书",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Watermelon Book | Datawhale October (3)",
+        "description": "Notes on decision trees: generation process, split selection, information entropy, information gain, ID3, C4.5, CART, pruning, continuous attributes, missing values, and multivariate decision trees.",
+        "tags": [
+          "Watermelon Book | Datawhale October",
+          "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（3）",
+        "description": "西瓜书・吃瓜教程の学習メモ。決定木の基本フロー、情報エントロピー、情報利得、ID3、C4.5、CART、剪定、連続値・欠損値処理、多変量決定木を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15415213",
@@ -288,7 +736,27 @@ window.BLOG_POSTS = [
       "吃瓜教程|Datawhale-10月",
       "西瓜书",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Watermelon Book | Datawhale October (2)",
+        "description": "Notes on the three elements of machine learning, linear models, linear regression, logistic regression, maximum likelihood estimation, information theory, linear discriminant analysis, covariance, norms, Lagrange multipliers, generalized eigenvalues, and generalized Rayleigh quotients.",
+        "tags": [
+          "Watermelon Book | Datawhale October",
+          "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 10月（2）",
+        "description": "西瓜书・吃瓜教程の学習メモ。機械学習の三要素、線形モデル、線形回帰、ロジスティック回帰、最尤推定、情報論、線形判別分析、Lagrange 乗数法、一般化 Rayleigh 商を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 10月",
+          "西瓜书",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15271830",
@@ -308,7 +776,27 @@ window.BLOG_POSTS = [
       "吃瓜教程|Datawhale-9月",
       "西瓜书",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Watermelon Book | Datawhale September (1)",
+        "description": "Notes on the introduction to machine learning: basic terminology, hypothesis space, version space, induction and deduction, inductive bias, model evaluation, overfitting, evaluation methods, validation sets, performance measures, precision, recall, F1, and exercises.",
+        "tags": [
+          "Watermelon Book | Datawhale September",
+          "Watermelon Book",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "吃瓜教程 | Datawhale 9月（1）",
+        "description": "西瓜书・吃瓜教程の学習メモ。機械学習の基本用語、仮説空間、帰納バイアス、モデル評価、過学習、評価方法、検証集合、性能指標、適合率・再現率・F1 を整理する。",
+        "tags": [
+          "吃瓜教程|Datawhale 9月",
+          "西瓜书",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15208262",
@@ -319,7 +807,27 @@ window.BLOG_POSTS = [
       "机器学习数学基础|Datawhale-8月",
       "数学",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Mathematical Foundations of Machine Learning | Datawhale August (5) Notes",
+        "description": "Notes on mean value theorems: boundedness and extreme value theorem, intermediate value theorem, average value theorem, zero theorem, Fermat's theorem, Rolle's theorem, Lagrange mean value theorem, Cauchy mean value theorem, and Taylor formula.",
+        "tags": [
+          "Mathematical Foundations of Machine Learning | Datawhale August",
+          "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（5）メモ",
+        "description": "機械学習の数学基礎メモ。中値定理、有界性と最大最小定理、介値定理、平均値定理、零点定理、Fermat、Rolle、Lagrange、Cauchy の中値定理、Taylor 公式を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15201241",
@@ -330,7 +838,27 @@ window.BLOG_POSTS = [
       "机器学习数学基础|Datawhale-8月",
       "数学",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Mathematical Foundations of Machine Learning | Datawhale August (4) Notes",
+        "description": "Notes on geometric applications of single-variable differential calculus: extrema, monotonicity, sufficient conditions for extrema, concavity and convexity, inflection points, asymptotes, and value ranges.",
+        "tags": [
+          "Mathematical Foundations of Machine Learning | Datawhale August",
+          "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（4）メモ",
+        "description": "機械学習の数学基礎メモ。一変数関数の微分学の幾何学的応用、極値と最大最小、単調性、凹凸性、変曲点、漸近線、値域を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15187212",
@@ -341,7 +869,27 @@ window.BLOG_POSTS = [
       "机器学习数学基础|Datawhale-8月",
       "数学",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Mathematical Foundations of Machine Learning | Datawhale August (3) Notes",
+        "description": "Notes on single-variable differential calculus: derivatives, differentials, geometric meaning, higher-order derivatives, derivative rules, implicit differentiation, logarithmic differentiation, Taylor formulas, and basic derivative formulas.",
+        "tags": [
+          "Mathematical Foundations of Machine Learning | Datawhale August",
+          "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 Datawhale 8月（3）メモ",
+        "description": "機械学習の数学基礎メモ。一変数関数の微分学、導数、微分、四則演算、分段関数、合成関数、逆関数、陰関数、対数微分、高階導数、Taylor 公式を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15170660",
@@ -352,7 +900,27 @@ window.BLOG_POSTS = [
       "机器学习数学基础|Datawhale-8月",
       "数学",
       "Datawhale"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Mathematical Foundations of Machine Learning | Datawhale August (2) Notes",
+        "description": "Notes on sequence limits, subsequences, properties of convergent sequences, limit operation rules, the squeeze theorem, and the monotone bounded convergence criterion.",
+        "tags": [
+          "Mathematical Foundations of Machine Learning | Datawhale August",
+          "Math",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 | Datawhale 8月（2）メモ",
+        "description": "機械学習の数学基礎メモ。数列の極限、部分列、収束数列の性質、極限の演算法則、はさみうちの原理、単調有界定理を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "数学",
+          "Datawhale"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-15159366",
@@ -363,7 +931,27 @@ window.BLOG_POSTS = [
       "机器学习数学基础|Datawhale-8月",
       "Datawhale",
       "数学"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Mathematical Foundations of Machine Learning | Datawhale August (1) Notes",
+        "description": "Notes on prerequisite calculus knowledge: inverse functions, function properties, common functions, sequence formulas, trigonometric identities, function limits, continuity, discontinuities, and related references.",
+        "tags": [
+          "Mathematical Foundations of Machine Learning | Datawhale August",
+          "Datawhale",
+          "Math"
+        ]
+      },
+      "ja": {
+        "title": "機械学習の数学基礎 | Datawhale 8月（1）メモ",
+        "description": "機械学習の数学基礎メモ。高等数学の準備知識、逆関数、関数の四つの性質、代表的な関数、数列公式、三角関数、関数の極限と連続性を整理する。",
+        "tags": [
+          "機械学習の数学基礎|Datawhale 8月",
+          "Datawhale",
+          "数学"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14617127",
@@ -374,7 +962,27 @@ window.BLOG_POSTS = [
       "python学习笔记",
       "pytorch",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] Using pack_padded_sequence() and pad_packed_sequence() in PyTorch",
+        "description": "Notes on PyTorch's pack_padded_sequence() and pad_packed_sequence(): what packed and padded mean, parameter shapes, sorting by sequence length, padding, LSTM input, and a zip() supplement.",
+        "tags": [
+          "Python Notes",
+          "pytorch",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】PyTorch の pack_padded_sequence() と pad_packed_sequence() の使い方",
+        "description": "PyTorch で可変長系列を扱うための pack_padded_sequence() と pad_packed_sequence() についての学習メモ。",
+        "tags": [
+          "python学習メモ",
+          "pytorch",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14612795",
@@ -385,7 +993,27 @@ window.BLOG_POSTS = [
       "python学习笔记",
       "pytorch",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] Using nn.Embedding in PyTorch",
+        "description": "Notes on word embeddings and torch.nn.Embedding: what embedding means, how PyTorch maps input indexes to embedding vectors, and a small example with padded batches.",
+        "tags": [
+          "Python Notes",
+          "pytorch",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】PyTorch の nn.Embedding の使い方",
+        "description": "PyTorch の nn.Embedding の原理と使い方についての学習メモ。単語埋め込みは文字や単語を数値ベクトルに変換する処理である。",
+        "tags": [
+          "python学習メモ",
+          "pytorch",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14587520",
@@ -396,7 +1024,27 @@ window.BLOG_POSTS = [
       "python学习笔记",
       "pytorch",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] nn.LSTM in PyTorch",
+        "description": "Notes on torch.nn.LSTM parameters, dropout, bidirectional LSTM behavior, and common tensor dimensions for x, h0, c0, output, hn, and cn.",
+        "tags": [
+          "Python Notes",
+          "pytorch",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】PyTorch の nn.LSTM",
+        "description": "PyTorch の nn.LSTM モジュールのパラメータ、dropout、入出力テンソルの次元について整理した学習メモ。",
+        "tags": [
+          "python学習メモ",
+          "pytorch",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14529720",
@@ -405,7 +1053,23 @@ window.BLOG_POSTS = [
     "date": "2021-03-13T17:41:00+08:00",
     "tags": [
       "cnblogs"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Fixing white Steam desktop shortcut icons",
+        "description": "I tried recreating the desktop shortcut from Steam, reinstalling the game, and checking Steam's icon folder, but none of that helped. In the end, directly changing the shortcut icon worked.",
+        "tags": [
+          "cnblogs"
+        ]
+      },
+      "ja": {
+        "title": "Steam ゲームのデスクトップショートカットアイコンが白くなる問題を解決する",
+        "description": "以前、アイコンを削除して Steam ライブラリからデスクトップショートカットを追加し直すなど、いろいろ試したが全部だめだった。最終的には、直接アイコンを変更する方法で解決した。",
+        "tags": [
+          "cnblogs"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14499003",
@@ -415,7 +1079,25 @@ window.BLOG_POSTS = [
     "tags": [
       "python学习笔记",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] Understanding self in Python",
+        "description": "Notes on how self works in Python classes: __init__, instance methods, inheritance, descriptors, class methods, and static methods.",
+        "tags": [
+          "Python Notes",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】Python における self の理解",
+        "description": "Python の self の使い方、静的メソッド、クラスメソッド、インスタンスメソッドの違いについての学習メモ。self はクラスのインスタンスオブジェクト自身を指す。",
+        "tags": [
+          "python学習メモ",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14433858",
@@ -425,7 +1107,25 @@ window.BLOG_POSTS = [
     "tags": [
       "python学习笔记",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] Creating, reading, and writing files",
+        "description": "Notes on opening, reading, and writing files in Python: creating files, writing with write and append, truncating content, deleting files, and several common read patterns.",
+        "tags": [
+          "Python Notes",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】ファイルの作成・読み込み・書き込み",
+        "description": "Python でファイルを開く、読み込む、書き込む方法の基礎メモ。ファイル作成、write、append、内容削除、open()+close()、with open()、複数の読み込み方法を整理する。",
+        "tags": [
+          "python学習メモ",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14418726",
@@ -435,7 +1135,25 @@ window.BLOG_POSTS = [
     "tags": [
       "python学习笔记",
       "python"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Python Study Notes: collections",
+        "description": "Notes on Python's collections module: ChainMap, Counter, deque, defaultdict, namedtuple, OrderedDict, UserDict, UserList, and UserString.",
+        "tags": [
+          "Python Study Notes",
+          "Python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】python-collections 学習メモ",
+        "description": "Python の collections モジュールについての学習メモ。ChainMap、Counter、deque、defaultdict、namedtuple、OrderedDict、UserDict、UserList、UserString を整理する。",
+        "tags": [
+          "python学習メモ",
+          "python"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14405656",
@@ -444,7 +1162,23 @@ window.BLOG_POSTS = [
     "date": "2021-02-15T22:34:00+08:00",
     "tags": [
       "cnblogs"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Jupyter Notebook setup notes",
+        "description": "I was about to switch to a new computer, so I wrote this note for future reference. I may keep updating it as I run into more setup details.",
+        "tags": [
+          "cnblogs"
+        ]
+      },
+      "ja": {
+        "title": "Jupyter Notebook の設定",
+        "description": "もうすぐ PC を買い替えるので、あとで確認できるようにメモとして残しておく。今後ほかの設定があれば更新する。初期設定、既定の起動ディレクトリ変更、コード補完、テーマ変更など。",
+        "tags": [
+          "cnblogs"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14404416",
@@ -453,7 +1187,23 @@ window.BLOG_POSTS = [
     "date": "2021-02-15T20:42:00+08:00",
     "tags": [
       "cnblogs"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Setting up TensorFlow and PyTorch environments",
+        "description": "I was about to switch to a new computer, so I wrote this note as a backup for later reference. TensorFlow installation on Windows 10, PyTorch environment setup on Windows 10, and an extra note about choosing a CUDA-compatible PyTorch build.",
+        "tags": [
+          "cnblogs"
+        ]
+      },
+      "ja": {
+        "title": "TensorFlow と PyTorch の環境構築",
+        "description": "あとで PC を買い替える予定があるので、備忘録として残しておく。あとから探し回らなくて済むように。TensorFlow と PyTorch の Windows 10 環境構築メモ。",
+        "tags": [
+          "cnblogs"
+        ]
+      }
+    }
   },
   {
     "slug": "cnblogs-14397504",
@@ -462,6 +1212,22 @@ window.BLOG_POSTS = [
     "date": "2021-02-11T11:31:00+08:00",
     "tags": [
       "Colaboratory"
-    ]
+    ],
+    "translations": {
+      "en": {
+        "title": "Running DeepQA on Colaboratory",
+        "description": "I wanted to run a dialogue-system project, but my own laptop was too weak for GPU training and CPU training would take about 30 hours. After my professor recommended Colaboratory, I wrote down the first-time setup and execution process.",
+        "tags": [
+          "Colaboratory"
+        ]
+      },
+      "ja": {
+        "title": "Colaboratory 上で Deep QA を動かす",
+        "description": "Deep QA を Colaboratory 上で実行したときの作業記録。Google Drive 連携、GPU 設定、TensorFlow バージョン変更、学習とテスト実行、遭遇したエラーを整理する。",
+        "tags": [
+          "Colaboratory"
+        ]
+      }
+    }
   }
 ];
