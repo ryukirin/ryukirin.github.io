@@ -298,7 +298,8 @@
     if (intro) intro.textContent = ui.blogIntro;
     searchInput.placeholder = ui.searchPlaceholder;
     tagInput.placeholder = ui.tagPlaceholder;
-    filterForm.querySelector('button[type="submit"]').textContent = ui.filter;
+    const submitButton = filterForm.querySelector('button[type="submit"]');
+    if (submitButton) submitButton.textContent = ui.filter;
     clearButton.textContent = ui.clear;
 
     window.BLOG_I18N.syncLanguageLinks(lang);
