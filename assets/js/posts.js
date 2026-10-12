@@ -1,5 +1,33 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261012-1",
+    "title": "deepagents-in-action打卡记录-Task0",
+    "description": "Datawhale deepagents-in-action 课程 Task0 打卡记录。安装 AgentSeek，运行 offline 最小工具 Notebook，生成模板并查看 info、task、doctor，并记录 Windows 下 SeekDB 嵌入模式不可用、WSL 代理导致后端无法连接的原因和解决方法。",
+    "date": "2026-10-12T19:05:00+09:00",
+    "tags": [
+      "deepagents-in-action",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task0",
+        "description": "Task 0 log for the Datawhale deepagents-in-action course: installing AgentSeek, running the offline minimal tool notebook, generating a template and checking info, task, and doctor, plus the causes and fixes for SeekDB embedded mode not working on Windows and a WSL proxy that made the backend unreachable.",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task0",
+        "description": "Datawhale deepagents-in-action コースの Task0 学習記録。AgentSeek のインストール、offline の最小ツール Notebook の実行、テンプレート生成と info・task・doctor の確認に加え、Windows で SeekDB の組み込みモードが使えない問題と、WSL のプロキシでバックエンドに接続できない問題の原因と解決方法をまとめる。",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-17726433",
     "title": "LangChain使用fine-tuned GPT-3.5",
     "description": "介绍如何在 LangChain 中使用 fine-tuned GPT-3.5：准备和校验 fine-tuning 数据、估算 token、创建任务、调用微调模型，并接入 LangChain。",
