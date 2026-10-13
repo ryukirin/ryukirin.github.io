@@ -1,5 +1,33 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261012-2",
+    "title": "deepagents-in-action打卡记录-Task1",
+    "description": "Datawhale deepagents-in-action 课程 Task1 打卡记录。修改第一章最小工具和 Agent Harness 实验的参数并观察报错，比较 create_agent 与 create_deep_agent 暴露的工具，在第二章研究助手中删除中间件参数，并用 @traceable 把不依赖框架的 Agent 接入 LangSmith。",
+    "date": "2026-10-13T23:41:00+09:00",
+    "tags": [
+      "deepagents-in-action",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task1",
+        "description": "Task 1 log for the Datawhale deepagents-in-action course: changing arguments in the Chapter 1 minimal tool and agent harness labs to observe the errors, comparing the tools exposed by create_agent and create_deep_agent, removing the middleware argument in the Chapter 2 research assistant, and tracing a framework-free agent in LangSmith with @traceable.",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task1",
+        "description": "Datawhale deepagents-in-action コースの Task1 学習記録。第 1 章の最小ツールと Agent Harness の実験で引数を変えてエラーを確認し、create_agent と create_deep_agent が公開するツールを比較した。第 2 章のリサーチアシスタントではミドルウェア引数を削除し、フレームワークを使わない Agent を @traceable で LangSmith に接続した。",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261012-1",
     "title": "deepagents-in-action打卡记录-Task0",
     "description": "Datawhale deepagents-in-action 课程 Task0 打卡记录。安装 AgentSeek，运行 offline 最小工具 Notebook，生成模板并查看 info、task、doctor，并记录 Windows 下 SeekDB 嵌入模式不可用、WSL 代理导致后端无法连接的原因和解决方法。",
