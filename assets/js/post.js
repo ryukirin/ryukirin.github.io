@@ -31,7 +31,9 @@
     const response = await fetch(language.postPath(slug));
     if (!response.ok) throw new Error(`Failed to load ${slug}.md`);
     const markdown = await response.text();
-    document.querySelector("#post-body").innerHTML = window.renderMarkdown(stripFrontmatter(markdown));
+    document.querySelector("#post-body").innerHTML = window.renderMarkdown(
+      stripLeadingTitle(stripFrontmatter(markdown))
+    );
     buildTableOfContents(ui);
     await renderEnhancements();
   } catch (error) {
@@ -60,6 +62,10 @@ function renderMissingPost(ui) {
 
 function stripFrontmatter(markdown) {
   return markdown.replace(/^---\r?\n[\s\S]*?\r?\n---\r?\n?/, "");
+}
+
+function stripLeadingTitle(markdown) {
+  return markdown.replace(/^\s*#[ \t]+[^\r\n]*(?:\r?\n|$)/, "");
 }
 
 function buildTableOfContents(ui) {
