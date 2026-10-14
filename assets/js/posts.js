@@ -1,5 +1,33 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261014",
+    "title": "deepagents-in-action打卡记录-Task2",
+    "description": "Datawhale deepagents-in-action 课程 Task2 打卡记录，整理第三章 Context Engineering：七个文件工具，长结果写入虚拟文件系统和历史对话压缩，StateBackend、FilesystemBackend、LocalShellBackend、StoreBackend、CompositeBackend 和沙箱后端，以及 FilesystemPermission、自定义后端和 PolicyWrapper 安全策略。",
+    "date": "2026-10-14T12:00:00+09:00",
+    "tags": [
+      "deepagents-in-action",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task2",
+        "description": "Task 2 notes for the Datawhale deepagents-in-action course on Chapter 3, context engineering: the seven file tools, offloading long results to the virtual file system and compacting history, the StateBackend, FilesystemBackend, LocalShellBackend, StoreBackend, CompositeBackend, and sandbox backends, and security policies with FilesystemPermission, custom backends, and PolicyWrapper.",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task2",
+        "description": "Datawhale deepagents-in-action コースの Task2 学習記録。第 3 章 Context Engineering について、7 つのファイルツール、長い結果の仮想ファイルシステムへの退避と履歴の要約、StateBackend・FilesystemBackend・LocalShellBackend・StoreBackend・CompositeBackend とサンドボックスバックエンド、FilesystemPermission・カスタムバックエンド・PolicyWrapper によるセキュリティポリシーを整理する。",
+        "tags": [
+          "deepagents-in-action",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261012-2",
     "title": "deepagents-in-action打卡记录-Task1",
     "description": "Datawhale deepagents-in-action 课程 Task1 打卡记录。修改第一章最小工具和 Agent Harness 实验的参数并观察报错，比较 create_agent 与 create_deep_agent 暴露的工具，在第二章研究助手中删除中间件参数，并用 @traceable 把不依赖框架的 Agent 接入 LangSmith。",
