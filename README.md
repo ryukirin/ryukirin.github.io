@@ -1,154 +1,115 @@
 # Kylin Blog
 
-这是一个部署在 GitHub Pages 上的纯静态个人博客。仓库不依赖框架，也没有必需的构建步骤；HTML、CSS、JavaScript、Markdown 和本地图片文件就是最终发布内容。
+Kylin 的个人博客，站点地址 https://ryukirin.github.io/
 
-## 项目结构
+纯静态站点，不使用框架，没有构建步骤。仓库里的 HTML、CSS、JavaScript、Markdown 和图片文件由 GitHub Pages 直接发布。
 
-- `index.html`：个人主页
-- `blog/index.html`：博客列表页
-- `blog/post.html?slug=<slug>`：文章详情页
-- `posts/`：Markdown 文章正文
-- `assets/js/posts.js`：文章元信息列表
-- `assets/js/markdown.js`：Markdown 渲染和增强逻辑
-- `assets/js/giscus.js`：GitHub Discussions / Giscus 评论配置
-- `assets/posts/<slug>/`：文章本地图片资源
-- `assets/icons/`：头像、站点图标和社交图标
-- `assets/css/site.css`：全站共享样式
-- `tools/import-cnblogs.mjs`：博客园文章导入脚本
+## 功能
+
+- 中文、英文、日文三种语言，页面上切换
+- 文章列表页按关键词和标签筛选
+- Markdown 支持 GFM 表格、Mermaid 图表和 KaTeX 公式
+- 文章详情页自动生成目录，显示上一篇、下一篇
+- 评论使用 Giscus，数据保存在本仓库的 GitHub Discussions
 
 ## 本地预览
 
-文章详情页通过 `fetch()` 加载 `posts/*.md`，因此需要用本地静态服务器预览。
-
-```powershell
-npm run serve
-```
-
-等价于：
+需要 Python 3。在仓库根目录运行：
 
 ```powershell
 python -m http.server 8000 --bind 127.0.0.1
 ```
 
-然后访问：
+装有 Node.js 时也可以运行 `npm run serve`，执行的是同一条命令。
 
-```text
-http://127.0.0.1:8000/
-```
+浏览器打开 http://127.0.0.1:8000/ 。文章详情页通过 `fetch()` 加载 Markdown，直接双击打开 HTML 文件时正文无法加载。
 
-## 写新文章
+## 写文章
 
-新增文章需要同时添加 Markdown 文件和文章元信息。
+每篇文章用一个 slug 标识，slug 同时用于文件名、URL 和评论映射。一篇文章涉及的文件如下。
 
-1. 在 `posts/` 下新增 Markdown 文件，例如：
+| 文件 | 内容 |
+| --- | --- |
+| `posts/<slug>.md` | 中文正文 |
+| `posts/en/<slug>.md` | 英文正文 |
+| `posts/ja/<slug>.md` | 日文正文 |
+| `assets/posts/<slug>/` | 文章图片 |
+| `assets/js/posts.js` | 文章元信息 |
 
-```text
-posts/my-new-post.md
-```
+### 步骤
 
-2. 在 `assets/js/posts.js` 中添加同名 `slug`：
+1. 在 `posts/` 下新建 `<slug>.md`，写中文正文。
+2. 把英文和日文译文分别放到 `posts/en/<slug>.md` 和 `posts/ja/<slug>.md`。
+3. 图片放到 `assets/posts/<slug>/`，正文中用绝对路径引用，例如 `![说明](/assets/posts/<slug>/image-01.png)`。
+4. 在 `assets/js/posts.js` 的数组中添加文章元信息：
 
-```js
-{
-  slug: "my-new-post",
-  title: "文章标题",
-  description: "一句话摘要",
-  date: "2026-06-13T20:00:00+09:00",
-  tags: ["Note"]
-}
-```
+   ```json
+   {
+     "slug": "my-new-post",
+     "title": "文章标题",
+     "description": "一句话摘要",
+     "date": "2026-10-14T20:00:00+09:00",
+     "tags": ["Note"],
+     "translations": {
+       "en": { "title": "Post title", "description": "One-line summary", "tags": ["Note"] },
+       "ja": { "title": "記事タイトル", "description": "一行の概要", "tags": ["Note"] }
+     }
+   }
+   ```
 
-3. 如有图片，放到对应的本地资源目录：
+5. 更新 `index.html`、`blog/index.html`、`blog/post.html` 中 `posts.js?v=` 的版本号，格式为当天日期加序号，例如 `20261014-1`。
 
-```text
-assets/posts/my-new-post/
-```
+文章详情页的地址是 `/blog/post.html?slug=<slug>`，英文版和日文版在后面加 `&lang=en` 或 `&lang=ja`。
 
-文章访问路径为：
+### 注意事项
 
-```text
-/blog/post.html?slug=my-new-post
-```
+- 标题、摘要、日期、标签都从文章元信息读取。正文开头的 `# 标题` 和 frontmatter 不会显示在文章详情页上。
+- 文章元信息里没有 `translations.en` 或 `translations.ja` 时，这篇文章不出现在对应语言的文章列表中。
+- `posts.js` 中的数组要保持合法 JSON，键名加双引号，不留尾逗号。
+- 文章发布后修改 slug，原有评论不再显示。
 
-## Markdown 支持
+### Markdown 扩展语法
 
-文章页使用 CDN 版 `marked` 和 `DOMPurify` 渲染 Markdown，并在渲染后增强这些能力：
+除 GFM 外，文章还支持下面两种写法：
 
-- GFM 表格
-- 代码块
-- 图片
-- Mermaid 图表
-- KaTeX 数学公式
-- 根据 `h2` / `h3` 自动生成目录
-- 上一篇 / 下一篇导航
-- GitHub Discussions / Giscus 评论
-
-Mermaid 示例：
+- Mermaid：语言标记为 `mermaid` 的代码块
+- KaTeX：行内公式用 `$...$` 或 `\(...\)`，块级公式用 `$$...$$` 或 `\[...\]`
 
 ````markdown
 ```mermaid
 flowchart LR
   A[想法] --> B[整理] --> C[发布]
 ```
-````
 
-数学公式示例：
-
-```markdown
-行内公式：$E = mc^2$
+行内公式 $E = mc^2$
 
 $$
 f(x) = \int_{-\infty}^{\infty} e^{-x^2} dx
 $$
-```
-
-## 博客园导入
-
-部分文章来自博客园旧文。需要重新导入时运行：
-
-```powershell
-node tools/import-cnblogs.mjs
-```
-
-导入脚本会处理标题、发布时间、分类标签、正文 Markdown、本地图片保存、HTML 表格转换和代码块清洗。
-
-导入脚本不会抓取评论，也不会在正文里加入博客园原文链接。
-
-## 评论配置
-
-文章页已经接入 GitHub Discussions / Giscus，配置集中在：
-
-```text
-assets/js/giscus.js
-```
-
-当前映射方式使用文章 `slug` 生成固定 discussion 标题：
-
-```text
-blog:<slug>
-```
-
-这种方式不依赖文章标题或页面 URL。后续即使改标题、改域名或调整详情页路径，评论仍能稳定对应到同一篇文章。
-
-如果重新配置 Giscus，需要确认：
-
-- 仓库开启 Discussions
-- 已安装 giscus GitHub App
-- 在 giscus.app 选择 `ryukirin/ryukirin.github.io`
-- 分类使用 `Announcements`
-- 映射关系选择 `Discussion 的标题包含特定字符串`
-- 勾选 `使用严格的标题匹配`
-- 将生成配置里的 `data-category-id` 填入 `assets/js/giscus.js` 的 `categoryId`
-
-`Announcements` 分类可以限制普通用户手动新建 discussion；文章对应的 discussion 创建后，登录 GitHub 的访客仍然可以在文章页评论。
+````
 
 ## 发布
 
-仓库可以直接通过 GitHub Pages 发布静态文件。更新文章、样式或脚本后提交并推送到 GitHub 即可。
+GitHub Pages 的发布源是 `main` 分支的根目录，改动推送到 `main` 后自动发布。
 
-## 维护约定
+HTML 用 `?v=` 版本号引用 CSS 和 JS。修改这些文件后要同时更新版本号，否则浏览器可能继续使用缓存。
 
-- 不需要引入 Astro、Spec Kit 或其他构建目录。
-- 新文章必须同时更新 `posts/*.md` 和 `assets/js/posts.js`。
-- 图片资源保存在仓库内，避免热链接远程图片。
-- 从博客园导入内容时，不导入评论，也不在正文追加原文链接。
+根目录的 `.nojekyll` 用于关闭 Jekyll 处理，需要保留。
+
+## 目录结构
+
+```text
+index.html             个人主页
+blog/index.html        文章列表页
+blog/post.html         文章详情页
+posts/                 中文正文，en/ 和 ja/ 下为译文
+assets/posts/<slug>/   文章图片
+assets/js/posts.js     文章元信息
+assets/js/i18n.js      三种语言的界面文案
+assets/js/giscus.js    Giscus 评论配置
+assets/css/site.css    全站样式
+assets/icons/          头像、站点图标和社交图标
+tools/                 博客园旧文的导入脚本
+```
+
+导入脚本的用法和注意事项见 [tools/README.md](tools/README.md)。
