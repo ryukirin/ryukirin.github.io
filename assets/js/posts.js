@@ -84,6 +84,84 @@ window.BLOG_POSTS = [
     }
   },
   {
+    "slug": "cnblogs-18390465",
+    "title": "【杂谈】字幕压制首次尝试记录",
+    "description": "第一次给视频压制硬字幕的记录。用 Aegisub 做字幕，用 MeGUI 2896 和 AviSynth 2.6.0 压制，关闭 MeGUI 自动更新以避开 29xx 版本的插件报错，并记录小丸工具箱、StarTools、消极压制的尝试结果。",
+    "date": "2024-08-31T16:46:00+08:00",
+    "tags": [
+      "杂谈"
+    ],
+    "translations": {
+      "en": {
+        "title": "[Misc] First Attempt at Hardcoding Subtitles",
+        "description": "Notes from hardcoding subtitles into a video for the first time: creating subtitles in Aegisub, encoding with MeGUI 2896 and AviSynth 2.6.0, turning off MeGUI auto-update to avoid a plugin error in 29xx versions, and how Xiaowan Toolbox, StarTools, and NegativeEncoder worked out.",
+        "tags": [
+          "Misc"
+        ]
+      },
+      "ja": {
+        "title": "【雑談】字幕の焼き込みを初めて試した記録",
+        "description": "動画に字幕を初めて焼き込んだときの記録。Aegisub で字幕を作り、MeGUI 2896 と AviSynth 2.6.0 で焼き込んだ。MeGUI 29xx 系で出るプラグインのエラーを避けるため自動更新をオフにし、小丸工具箱、StarTools、消极压制を試した結果もまとめる。",
+        "tags": [
+          "雑談"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "cnblogs-18284131",
+    "title": "【python学习笔记】Python装饰器",
+    "description": "Python 装饰器学习笔记，从 PEP 318 的定义开始，整理闭包、nonlocal、循环变量导致的闭包陷阱、多层装饰器的执行顺序，以及 @wraps 保留函数元数据的作用。",
+    "date": "2024-07-04T16:30:00+08:00",
+    "tags": [
+      "python学习笔记",
+      "python"
+    ],
+    "translations": {
+      "en": {
+        "title": "[Python Notes] Python Decorators",
+        "description": "Study notes on Python decorators: the definition in PEP 318, closures, nonlocal, the closure pitfall with loop variables, the execution order of stacked decorators, and how @wraps keeps the wrapped function's metadata.",
+        "tags": [
+          "Python Notes",
+          "python"
+        ]
+      },
+      "ja": {
+        "title": "【Python学習メモ】Python のデコレーター",
+        "description": "Python のデコレーターについての学習メモ。PEP 318 の定義から始めて、クロージャ、nonlocal、ループ変数によるクロージャの落とし穴、複数のデコレーターの実行順序、関数のメタデータを残す @wraps の役割を整理する。",
+        "tags": [
+          "python学習メモ",
+          "python"
+        ]
+      }
+    }
+  },
+  {
+    "slug": "cnblogs-18245945",
+    "title": "【Miro】Miro入门",
+    "description": "Miro REST API 入门笔记，记录创建 App 和获取 Access Token 的步骤、Web SDK 与 REST API 的区别，以及用 Python 创建白板、卡片、连线和获取、更新、删除 item 的请求示例。",
+    "date": "2024-06-13T15:16:00+08:00",
+    "tags": [
+      "Miro"
+    ],
+    "translations": {
+      "en": {
+        "title": "[Miro] Getting Started with Miro",
+        "description": "Getting-started notes for the Miro REST API: creating an app and getting an access token, how the Web SDK differs from the REST API, and Python request examples for creating boards, cards, and connectors and for reading, updating, and deleting items.",
+        "tags": [
+          "Miro"
+        ]
+      },
+      "ja": {
+        "title": "【Miro】Miro 入門",
+        "description": "Miro REST API の入門メモ。アプリの作成と Access Token の取得手順、Web SDK と REST API の違い、Python でボード、card、コネクターを作成し、item を取得、更新、削除するリクエストの例をまとめる。",
+        "tags": [
+          "Miro"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-17726433",
     "title": "LangChain使用fine-tuned GPT-3.5",
     "description": "介绍如何在 LangChain 中使用 fine-tuned GPT-3.5：准备和校验 fine-tuning 数据、估算 token、创建任务、调用微调模型，并接入 LangChain。",
