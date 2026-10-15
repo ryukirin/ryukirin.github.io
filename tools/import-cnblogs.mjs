@@ -11,7 +11,12 @@ async function main() {
   await mkdir(POSTS_DIR, { recursive: true });
   await mkdir(POST_ASSETS_DIR, { recursive: true });
 
-  const urls = await collectArticleUrls();
+  const urls = (await collectArticleUrls()).filter((url) => {
+    const slug = `cnblogs-${articleId(url)}`;
+    if (!existsSync(new URL(`${slug}.md`, POSTS_DIR))) return true;
+    console.log(`skip ${url} (posts/${slug}.md exists)`);
+    return false;
+  });
   const posts = [];
 
   for (const [index, url] of urls.entries()) {
@@ -36,13 +41,13 @@ async function collectArticleUrls() {
   for (let page = 1; page <= 50; page += 1) {
     const url = page === 1 ? BLOG_HOME : `${BLOG_HOME}?page=${page}`;
     const html = await fetchText(url);
-    const pageUrls = [...html.matchAll(/https:\/\/www\.cnblogs\.com\/wakarimasu\/p\/\d+\.html/g)]
-      .map((match) => match[0])
-      .filter((articleUrl) => {
-        if (seen.has(articleUrl)) return false;
-        seen.add(articleUrl);
+    const pageUrls = [...html.matchAll(/https:\/\/www\.cnblogs\.com\/wakarimasu\/p\/(\d+)(?:\.html)?/g)]
+      .filter((match) => {
+        if (seen.has(match[1])) return false;
+        seen.add(match[1]);
         return true;
-      });
+      })
+      .map((match) => match[0]);
 
     urls.push(...pageUrls);
 
@@ -61,7 +66,7 @@ async function importArticle(url) {
   const title = extractScriptString(html, "cb_postTitle") || textContent(extractByClass(html, "postTitle2")) || "Untitled";
   const dateText = extractScriptString(html, "cb_entryCreatedDate") || textContent(extractById(html, "post-date"));
   const date = normalizeDateTime(dateText);
-  const postId = url.match(/\/p\/(\d+)\.html/)?.[1];
+  const postId = articleId(url);
   const slug = `cnblogs-${postId}`;
   const rawBody = await localizeImages(extractPostBody(html), slug);
   const description = makeDescription(rawBody);
@@ -123,11 +128,15 @@ async function readExistingPosts() {
   }
 }
 
+function articleId(url) {
+  return url.match(/\/p\/(\d+)/)?.[1];
+}
+
 function mergePosts(existing, imported) {
   const bySlug = new Map();
 
   for (const post of [...existing, ...imported]) {
-    bySlug.set(post.slug, post);
+    if (!bySlug.has(post.slug)) bySlug.set(post.slug, post);
   }
 
   return [...bySlug.values()].sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -319,9 +328,9 @@ function stashCodeBlock(codeBlocks, code) {
 }
 
 function simplifyCodeBlock(code) {
-  const script = code.match(/<script[^>]*>([\s\S]*?)<\/script>/i);
-  if (script) {
-    return dedent(script[1]).trim();
+  const scripts = [...code.matchAll(/<script[^>]*>([\s\S]*?)<\/script>/gi)];
+  if (scripts.length === 1 && scripts[0][1].trim()) {
+    return dedent(scripts[0][1]).trim();
   }
 
   return code;
