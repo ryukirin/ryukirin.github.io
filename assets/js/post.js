@@ -71,7 +71,7 @@ function stripLeadingTitle(markdown) {
 function buildTableOfContents(ui) {
   const body = document.querySelector("#post-body");
   const toc = document.querySelector("#post-toc");
-  const headings = [...body.querySelectorAll("h2, h3")];
+  const headings = [...body.querySelectorAll("h2, h3, h4")];
 
   if (!headings.length) {
     toc.innerHTML = `<span class="text-muted">${escapeHtml(ui.tocEmpty)}</span>`;

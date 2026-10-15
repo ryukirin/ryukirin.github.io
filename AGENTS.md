@@ -33,7 +33,7 @@ The post page uses `marked` and `DOMPurify` from CDN, with post-processing for:
 
 - Mermaid diagrams
 - KaTeX math
-- Table of contents from `h2` and `h3`
+- Table of contents from `h2`, `h3`, and `h4`
 - Previous / next post navigation
 
 ## Local Preview
