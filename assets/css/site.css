@@ -585,7 +585,19 @@ a:hover {
 .markdown-body h3,
 .markdown-body h4 {
   line-height: 1.25;
-  margin: 2.1em 0 0.75em;
+  margin: 1.4em 0 0.6em;
+}
+
+.markdown-body h3 {
+  margin-top: 1.3em;
+}
+
+.markdown-body h4 {
+  margin-top: 1.2em;
+}
+
+.markdown-body > :first-child {
+  margin-top: 0;
 }
 
 .markdown-body p,
