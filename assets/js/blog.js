@@ -191,8 +191,7 @@
     const query = normalizeText(value);
     const options = allTags
       .filter((tag) => !state.tags.includes(tag))
-      .filter((tag) => !query || normalizeText(tag).includes(query))
-      .slice(0, 8);
+      .filter((tag) => !query || normalizeText(tag).includes(query));
 
     tagSuggestionsRoot.innerHTML = options.length
       ? options

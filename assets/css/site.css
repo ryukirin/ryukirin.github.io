@@ -518,6 +518,8 @@ a:hover {
 .article-toc {
   color: var(--color-muted);
   font-size: 0.92rem;
+  max-height: calc(100vh - 120px);
+  overflow-y: auto;
   position: sticky;
   top: 96px;
 }
@@ -550,6 +552,11 @@ a:hover {
 
 .article-toc a[data-level="3"] {
   padding-left: 14px;
+}
+
+.article-toc a[data-level="4"] {
+  font-size: 0.86rem;
+  padding-left: 28px;
 }
 
 .back-link {
@@ -589,6 +596,16 @@ a:hover {
 .markdown-body table,
 .markdown-body .table-wrap {
   margin-bottom: 1.2rem;
+}
+
+.markdown-body li > p {
+  margin-bottom: 0.4rem;
+}
+
+.markdown-body li > p:last-child,
+.markdown-body li > ul,
+.markdown-body li > ol {
+  margin-bottom: 0;
 }
 
 .markdown-body .table-wrap {
@@ -821,6 +838,8 @@ a:hover {
 
   .article-toc {
     margin-bottom: 28px;
+    max-height: none;
+    overflow-y: visible;
     position: static;
   }
 
