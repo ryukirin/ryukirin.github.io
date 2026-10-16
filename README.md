@@ -9,7 +9,7 @@ Kylin 的个人博客，站点地址 https://ryukirin.github.io/
 - 中文、英文、日文三种语言，页面上切换
 - 文章列表页按关键词和标签筛选
 - Markdown 支持 GFM 表格、Mermaid 图表和 KaTeX 公式
-- 文章详情页自动生成目录，显示上一篇、下一篇
+- 文章详情页自动生成目录（手机宽度下不显示），显示上一篇、下一篇
 - 评论使用 Giscus，数据保存在本仓库的 GitHub Discussions
 
 ## 本地预览
