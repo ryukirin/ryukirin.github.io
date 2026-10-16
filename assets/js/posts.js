@@ -3,7 +3,7 @@ window.BLOG_POSTS = [
     "slug": "cnblogs-20261014",
     "title": "deepagents-in-action打卡记录-Task2",
     "description": "Datawhale deepagents-in-action 课程 Task2 打卡记录，整理第三章 Context Engineering：七个文件工具，长结果写入虚拟文件系统和历史对话压缩，StateBackend、FilesystemBackend、LocalShellBackend、StoreBackend、CompositeBackend 和沙箱后端，以及 FilesystemPermission、自定义后端和 PolicyWrapper 安全策略。",
-    "date": "2026-10-14T12:00:00+09:00",
+    "date": "2026-10-14T23:30:00+09:00",
     "tags": [
       "Deep Agents实战|Datawhale-10月",
       "LLM",
