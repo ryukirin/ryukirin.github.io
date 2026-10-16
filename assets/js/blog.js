@@ -350,19 +350,19 @@ function getVisiblePages(currentPage, pageCount) {
 }
 
 function renderPostCard(post) {
-  const tags = post.tags.map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`).join("");
   const lang = window.BLOG_I18N.getCurrentLang();
+  const tags = window.BLOG_I18N.renderTagLinks(post.tags, lang);
   const url = window.BLOG_I18N.withLang(
     `/blog/post.html?slug=${encodeURIComponent(post.slug)}`,
     lang
   );
   return `
-    <a class="post-card" href="${escapeHtml(url)}">
+    <article class="post-card">
       <div class="post-meta">${formatDate(post.date)}</div>
-      <h3>${escapeHtml(post.title)}</h3>
+      <h3><a class="post-card__link" href="${escapeHtml(url)}">${escapeHtml(post.title)}</a></h3>
       <p>${escapeHtml(post.description)}</p>
       <div class="tag-row">${tags}</div>
-    </a>
+    </article>
   `;
 }
 

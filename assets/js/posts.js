@@ -5,7 +5,8 @@ window.BLOG_POSTS = [
     "description": "Datawhale deepagents-in-action 课程 Task2 打卡记录，整理第三章 Context Engineering：七个文件工具，长结果写入虚拟文件系统和历史对话压缩，StateBackend、FilesystemBackend、LocalShellBackend、StoreBackend、CompositeBackend 和沙箱后端，以及 FilesystemPermission、自定义后端和 PolicyWrapper 安全策略。",
     "date": "2026-10-14T12:00:00+09:00",
     "tags": [
-      "deepagents-in-action",
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
       "Datawhale"
     ],
     "translations": {
@@ -13,7 +14,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action Study Log - Task2",
         "description": "Task 2 notes for the Datawhale deepagents-in-action course on Chapter 3, context engineering: the seven file tools, offloading long results to the virtual file system and compacting history, the StateBackend, FilesystemBackend, LocalShellBackend, StoreBackend, CompositeBackend, and sandbox backends, and security policies with FilesystemPermission, custom backends, and PolicyWrapper.",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
           "Datawhale"
         ]
       },
@@ -21,7 +23,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action 学習記録 - Task2",
         "description": "Datawhale deepagents-in-action コースの Task2 学習記録。第 3 章 Context Engineering について、7 つのファイルツール、長い結果の仮想ファイルシステムへの退避と履歴の要約、StateBackend・FilesystemBackend・LocalShellBackend・StoreBackend・CompositeBackend とサンドボックスバックエンド、FilesystemPermission・カスタムバックエンド・PolicyWrapper によるセキュリティポリシーを整理する。",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
           "Datawhale"
         ]
       }
@@ -33,7 +36,8 @@ window.BLOG_POSTS = [
     "description": "Datawhale deepagents-in-action 课程 Task1 打卡记录。修改第一章最小工具和 Agent Harness 实验的参数并观察报错，比较 create_agent 与 create_deep_agent 暴露的工具，在第二章研究助手中删除中间件参数，并用 @traceable 把不依赖框架的 Agent 接入 LangSmith。",
     "date": "2026-10-13T23:41:00+09:00",
     "tags": [
-      "deepagents-in-action",
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
       "Datawhale"
     ],
     "translations": {
@@ -41,7 +45,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action Study Log - Task1",
         "description": "Task 1 log for the Datawhale deepagents-in-action course: changing arguments in the Chapter 1 minimal tool and agent harness labs to observe the errors, comparing the tools exposed by create_agent and create_deep_agent, removing the middleware argument in the Chapter 2 research assistant, and tracing a framework-free agent in LangSmith with @traceable.",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
           "Datawhale"
         ]
       },
@@ -49,7 +54,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action 学習記録 - Task1",
         "description": "Datawhale deepagents-in-action コースの Task1 学習記録。第 1 章の最小ツールと Agent Harness の実験で引数を変えてエラーを確認し、create_agent と create_deep_agent が公開するツールを比較した。第 2 章のリサーチアシスタントではミドルウェア引数を削除し、フレームワークを使わない Agent を @traceable で LangSmith に接続した。",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
           "Datawhale"
         ]
       }
@@ -61,7 +67,8 @@ window.BLOG_POSTS = [
     "description": "Datawhale deepagents-in-action 课程 Task0 打卡记录。安装 AgentSeek，运行 offline 最小工具 Notebook，生成模板并查看 info、task、doctor，并记录 Windows 下 SeekDB 嵌入模式不可用、WSL 代理导致后端无法连接的原因和解决方法。",
     "date": "2026-10-12T19:05:00+09:00",
     "tags": [
-      "deepagents-in-action",
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
       "Datawhale"
     ],
     "translations": {
@@ -69,7 +76,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action Study Log - Task0",
         "description": "Task 0 log for the Datawhale deepagents-in-action course: installing AgentSeek, running the offline minimal tool notebook, generating a template and checking info, task, and doctor, plus the causes and fixes for SeekDB embedded mode not working on Windows and a WSL proxy that made the backend unreachable.",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
           "Datawhale"
         ]
       },
@@ -77,7 +85,8 @@ window.BLOG_POSTS = [
         "title": "deepagents-in-action 学習記録 - Task0",
         "description": "Datawhale deepagents-in-action コースの Task0 学習記録。AgentSeek のインストール、offline の最小ツール Notebook の実行、テンプレート生成と info・task・doctor の確認に加え、Windows で SeekDB の組み込みモードが使えない問題と、WSL のプロキシでバックエンドに接続できない問題の原因と解決方法をまとめる。",
         "tags": [
-          "deepagents-in-action",
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
           "Datawhale"
         ]
       }
@@ -142,21 +151,24 @@ window.BLOG_POSTS = [
     "description": "Miro REST API 入门笔记，记录创建 App 和获取 Access Token 的步骤、Web SDK 与 REST API 的区别，以及用 Python 创建白板、卡片、连线和获取、更新、删除 item 的请求示例。",
     "date": "2024-06-13T15:16:00+08:00",
     "tags": [
-      "Miro"
+      "Miro",
+      "python"
     ],
     "translations": {
       "en": {
         "title": "[Miro] Getting Started with Miro",
         "description": "Getting-started notes for the Miro REST API: creating an app and getting an access token, how the Web SDK differs from the REST API, and Python request examples for creating boards, cards, and connectors and for reading, updating, and deleting items.",
         "tags": [
-          "Miro"
+          "Miro",
+          "python"
         ]
       },
       "ja": {
         "title": "【Miro】Miro 入門",
         "description": "Miro REST API の入門メモ。アプリの作成と Access Token の取得手順、Web SDK と REST API の違い、Python でボード、card、コネクターを作成し、item を取得、更新、削除するリクエストの例をまとめる。",
         "tags": [
-          "Miro"
+          "Miro",
+          "python"
         ]
       }
     }
@@ -1214,21 +1226,21 @@ window.BLOG_POSTS = [
     "description": "记录修复 Steam 游戏桌面快捷方式图标变白的问题：重建快捷方式、重装和检查图标文件夹都无效，最后通过直接修改快捷方式图标解决。",
     "date": "2021-03-13T17:41:00+08:00",
     "tags": [
-      "cnblogs"
+      "杂谈"
     ],
     "translations": {
       "en": {
         "title": "Fixing white Steam desktop shortcut icons",
         "description": "I tried recreating the desktop shortcut from Steam, reinstalling the game, and checking Steam's icon folder, but none of that helped. In the end, directly changing the shortcut icon worked.",
         "tags": [
-          "cnblogs"
+          "Misc"
         ]
       },
       "ja": {
         "title": "Steam ゲームのデスクトップショートカットアイコンが白くなる問題を解決する",
         "description": "以前、アイコンを削除して Steam ライブラリからデスクトップショートカットを追加し直すなど、いろいろ試したが全部だめだった。最終的には、直接アイコンを変更する方法で解決した。",
         "tags": [
-          "cnblogs"
+          "雑談"
         ]
       }
     }
@@ -1323,21 +1335,21 @@ window.BLOG_POSTS = [
     "description": "Jupyter Notebook 设置备忘，整理默认打开目录、代码自动补全、主题调整等初始配置，方便更换电脑后快速恢复环境。",
     "date": "2021-02-15T22:34:00+08:00",
     "tags": [
-      "cnblogs"
+      "python"
     ],
     "translations": {
       "en": {
         "title": "Jupyter Notebook setup notes",
         "description": "I was about to switch to a new computer, so I wrote this note for future reference. I may keep updating it as I run into more setup details.",
         "tags": [
-          "cnblogs"
+          "python"
         ]
       },
       "ja": {
         "title": "Jupyter Notebook の設定",
         "description": "もうすぐ PC を買い替えるので、あとで確認できるようにメモとして残しておく。今後ほかの設定があれば更新する。初期設定、既定の起動ディレクトリ変更、コード補完、テーマ変更など。",
         "tags": [
-          "cnblogs"
+          "python"
         ]
       }
     }
@@ -1348,21 +1360,24 @@ window.BLOG_POSTS = [
     "description": "TensorFlow 和 PyTorch 环境搭建备忘，整理 Windows 10 下 TensorFlow 安装、PyTorch 环境配置，以及选择 CUDA 兼容版本的补充说明。",
     "date": "2021-02-15T20:42:00+08:00",
     "tags": [
-      "cnblogs"
+      "pytorch",
+      "python"
     ],
     "translations": {
       "en": {
         "title": "Setting up TensorFlow and PyTorch environments",
         "description": "I was about to switch to a new computer, so I wrote this note as a backup for later reference. TensorFlow installation on Windows 10, PyTorch environment setup on Windows 10, and an extra note about choosing a CUDA-compatible PyTorch build.",
         "tags": [
-          "cnblogs"
+          "pytorch",
+          "python"
         ]
       },
       "ja": {
         "title": "TensorFlow と PyTorch の環境構築",
         "description": "あとで PC を買い替える予定があるので、備忘録として残しておく。あとから探し回らなくて済むように。TensorFlow と PyTorch の Windows 10 環境構築メモ。",
         "tags": [
-          "cnblogs"
+          "pytorch",
+          "python"
         ]
       }
     }

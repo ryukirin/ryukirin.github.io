@@ -206,6 +206,15 @@
     });
   }
 
+  function renderTagLinks(tags, lang) {
+    return tags
+      .map((tag) => {
+        const href = withLang(`/blog/?tag=${encodeURIComponent(tag)}`, lang);
+        return `<a class="tag" href="${escapeHtml(href)}">${escapeHtml(tag)}</a>`;
+      })
+      .join("");
+  }
+
   function escapeHtml(value) {
     return String(value)
       .replaceAll("&", "&amp;")
@@ -225,6 +234,7 @@
     renderLanguageSwitcher,
     syncLanguageLinks,
     applySharedUi,
+    renderTagLinks,
     withLang
   };
 })();

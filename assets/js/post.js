@@ -22,9 +22,7 @@
   document.querySelector('meta[name="description"]')?.setAttribute("content", meta.description);
   document.querySelector("#post-title").textContent = meta.title;
   document.querySelector("#post-date").textContent = formatDate(meta.date);
-  document.querySelector("#post-tags").innerHTML = meta.tags
-    .map((tag) => `<span class="tag">${escapeHtml(tag)}</span>`)
-    .join("");
+  document.querySelector("#post-tags").innerHTML = window.BLOG_I18N.renderTagLinks(meta.tags, lang);
   renderPostNavigation(meta);
 
   try {
