@@ -33,7 +33,8 @@
       stripLeadingTitle(stripFrontmatter(markdown))
     );
     buildTableOfContents(ui);
-    await renderEnhancements();
+    const sourceTags = window.BLOG_POSTS.find((post) => post.slug === slug)?.tags || [];
+    await renderEnhancements(codeLanguagesForTags(sourceTags));
   } catch (error) {
     document.querySelector("#post-body").innerHTML = `
       <p>${escapeHtml(ui.loadingError)}</p>
@@ -166,7 +167,53 @@ function applyUiText(ui, lang) {
   window.BLOG_I18N.syncLanguageLinks(lang);
 }
 
-async function renderEnhancements() {
+const CODE_LANGUAGE_HINTS = {
+  python: ["python"],
+  "python学习笔记": ["python"],
+  pytorch: ["python"],
+  LLM: ["python"],
+  LangChain: ["python"],
+  ChatGPT: ["python"],
+  Colaboratory: ["python"],
+  Leetcode: ["python"],
+  Miro: ["python"],
+  Neo4j: ["python"],
+  "西瓜书": ["python"],
+  "Deep Agents实战|Datawhale-10月": ["python"],
+  Java: ["java"],
+  "前端": ["javascript", "xml", "css"],
+  JS: ["javascript", "xml"],
+  CSS: ["css", "xml"],
+  HTML: ["xml", "css", "javascript"],
+  "Linux组队学习": ["bash"]
+};
+
+const AUTO_DETECT_LANGUAGES = ["python", "java", "javascript", "xml", "css", "bash", "sql", "json", "cpp", "c", "yaml"];
+
+function codeLanguagesForTags(tags) {
+  return [...new Set(tags.flatMap((tag) => CODE_LANGUAGE_HINTS[tag] || []))];
+}
+
+function highlightCode(root, hintLanguages) {
+  if (!window.hljs) return;
+
+  root.querySelectorAll("pre code").forEach((code) => {
+    const declared = [...code.classList].find((name) => name.startsWith("language-"))?.slice("language-".length);
+    if (declared) {
+      if (window.hljs.getLanguage(declared)) window.hljs.highlightElement(code);
+      return;
+    }
+
+    const candidates = hintLanguages.length ? hintLanguages : AUTO_DETECT_LANGUAGES;
+    const result = window.hljs.highlightAuto(code.textContent, candidates);
+    if (!result.language || (!hintLanguages.length && result.relevance < 10)) return;
+
+    code.innerHTML = result.value;
+    code.classList.add("hljs", `language-${result.language}`);
+  });
+}
+
+async function renderEnhancements(hintLanguages) {
   const body = document.querySelector("#post-body");
 
   body.querySelectorAll("pre code.language-mermaid").forEach((code) => {
@@ -174,6 +221,8 @@ async function renderEnhancements() {
     pre.className = "mermaid";
     pre.textContent = code.textContent;
   });
+
+  highlightCode(body, hintLanguages);
 
   if (window.renderMathInElement) {
     window.renderMathInElement(body, {
