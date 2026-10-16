@@ -175,8 +175,8 @@
     selectedTagsRoot.innerHTML = tags
       .map(
         (tag) => `
-          <span class="selected-tag">
-            ${escapeHtml(tag)}
+          <span class="selected-tag" title="${escapeHtml(tag)}">
+            <span class="selected-tag__text">${escapeHtml(tag)}</span>
             <button type="button" data-remove-tag="${escapeHtml(tag)}" aria-label="移除 ${escapeHtml(
           tag
         )}">×</button>
