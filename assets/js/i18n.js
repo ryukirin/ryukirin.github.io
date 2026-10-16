@@ -8,6 +8,8 @@
       ui: {
         navHome: "首页",
         navBlog: "博客",
+        navMenu: "菜单",
+        navLanguage: "语言",
         searchKeyword: "关键词",
         searchPlaceholder: "标题或摘要",
         tags: "标签",
@@ -49,6 +51,8 @@
       ui: {
         navHome: "ホーム",
         navBlog: "ブログ",
+        navMenu: "メニュー",
+        navLanguage: "言語",
         searchKeyword: "キーワード",
         searchPlaceholder: "タイトルまたは概要",
         tags: "タグ",
@@ -90,6 +94,8 @@
       ui: {
         navHome: "Home",
         navBlog: "Blog",
+        navMenu: "Menu",
+        navLanguage: "Language",
         searchKeyword: "Keyword",
         searchPlaceholder: "Title or summary",
         tags: "Tags",
@@ -127,6 +133,13 @@
 
   const defaultLang = "zh";
   const languageKeys = Object.keys(languages);
+
+  const GLOBE_ICON = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+    stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/>
+    <path d="M3 12h18"/><path d="M12 3a14 14 0 0 1 0 18"/><path d="M12 3a14 14 0 0 0 0 18"/></svg>`;
+
+  const MENU_ICON = `<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"
+    stroke-linecap="round" aria-hidden="true"><path d="M4 7h16"/><path d="M4 12h16"/><path d="M4 17h16"/></svg>`;
 
   function getCurrentLang() {
     const params = new URLSearchParams(window.location.search);
@@ -173,10 +186,7 @@
     const nav = document.querySelector(".site-header .navbar-nav");
     if (!nav || nav.querySelector(".language-switcher")) return;
 
-    const switcher = document.createElement("div");
-    switcher.className = "language-switcher";
-    switcher.setAttribute("aria-label", "Language");
-    switcher.innerHTML = languageKeys
+    const languageLinks = languageKeys
       .map((key) => {
         const href = withLang(window.location.href, key);
         const isActive = key === lang;
@@ -185,13 +195,70 @@
       })
       .join("");
 
+    const switcher = document.createElement("div");
+    switcher.className = "language-switcher";
+    switcher.setAttribute("aria-label", "Language");
+    switcher.innerHTML = languageLinks;
+
     nav.appendChild(switcher);
+    renderMobileNav(nav, languageLinks, languages[lang].ui);
     applySharedUi(lang);
+  }
+
+  function renderMobileNav(nav, languageLinks, ui) {
+    const container = nav.closest(".container");
+    if (!container) return;
+
+    const pageLinks = [...nav.querySelectorAll(".nav-link")]
+      .map((link) => link.outerHTML)
+      .join("");
+
+    const controls = document.createElement("div");
+    controls.className = "nav-controls";
+    controls.innerHTML = `
+      <div class="nav-dropdown">
+        <button type="button" class="nav-icon-button" data-nav-toggle aria-expanded="false"
+          aria-controls="nav-panel-language" aria-label="${escapeHtml(ui.navLanguage)}">${GLOBE_ICON}</button>
+        <div id="nav-panel-language" class="nav-dropdown__panel language-menu" hidden>${languageLinks}</div>
+      </div>
+      <div class="nav-dropdown">
+        <button type="button" class="nav-icon-button" data-nav-toggle aria-expanded="false"
+          aria-controls="nav-panel-menu" aria-label="${escapeHtml(ui.navMenu)}">${MENU_ICON}</button>
+        <div id="nav-panel-menu" class="nav-dropdown__panel" hidden>${pageLinks}</div>
+      </div>
+    `;
+    container.appendChild(controls);
+
+    const toggles = [...controls.querySelectorAll("[data-nav-toggle]")];
+    const closeAll = (except) => {
+      toggles.forEach((toggle) => {
+        if (toggle === except) return;
+        toggle.setAttribute("aria-expanded", "false");
+        document.getElementById(toggle.getAttribute("aria-controls")).hidden = true;
+      });
+    };
+
+    toggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        const panel = document.getElementById(toggle.getAttribute("aria-controls"));
+        const willOpen = panel.hidden;
+        closeAll(toggle);
+        panel.hidden = !willOpen;
+        toggle.setAttribute("aria-expanded", String(willOpen));
+      });
+    });
+
+    document.addEventListener("click", (event) => {
+      if (!controls.contains(event.target)) closeAll();
+    });
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeAll();
+    });
   }
 
   function syncLanguageLinks(lang) {
     document.querySelectorAll('a[href="/"], a[href^="/blog/"]').forEach((link) => {
-      if (link.closest(".language-switcher")) return;
+      if (link.closest(".language-switcher, .language-menu")) return;
       link.href = withLang(link.href, lang);
     });
     applySharedUi(lang);
