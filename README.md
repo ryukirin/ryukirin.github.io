@@ -7,9 +7,10 @@ Kylin 的个人博客，站点地址 https://ryukirin.github.io/
 ## 功能
 
 - 中文、英文、日文三种语言，页面上切换
-- 文章列表页按关键词和标签筛选
-- Markdown 支持 GFM 表格、Mermaid 图表和 KaTeX 公式
-- 文章详情页自动生成目录（手机宽度下不显示），显示上一篇、下一篇
+- 文章列表页按关键词和标签筛选。点击文章上的标签，跳转到按该标签筛选的列表
+- Markdown 支持 GFM 表格、Mermaid 图表、KaTeX 公式和代码高亮
+- 文章详情页自动生成目录，显示上一篇、下一篇
+- 手机宽度下导航收起为语言按钮和菜单按钮，文章详情页不显示目录
 - 评论使用 Giscus，数据保存在本仓库的 GitHub Discussions
 
 ## 本地预览
@@ -74,7 +75,7 @@ python -m http.server 8000 --bind 127.0.0.1
 
 - Mermaid：语言标记为 `mermaid` 的代码块
 - KaTeX：行内公式用 `$...$` 或 `\(...\)`，块级公式用 `$$...$$` 或 `\[...\]`
-- 代码高亮：代码块按语言标记高亮，例如 ` ```python `。没有语言标记的代码块按文章标签推断语言（对应关系见 `assets/js/post.js` 的 `CODE_LANGUAGE_HINTS`），标签对应不到语言时，在常见语言中自动识别，识别把握度不够时不高亮。写新文章时建议加上语言标记
+- 代码高亮：代码块按语言标记高亮，例如 ` ```python `。没有语言标记的代码块按文章标签推断语言（对应关系见 `assets/js/post.js` 的 `CODE_LANGUAGE_HINTS`），标签对应不到语言时，在常见语言中自动识别，识别把握度不够时不高亮。写新文章时建议加上语言标记。新增的标签需要对应某种语言时，在 `CODE_LANGUAGE_HINTS` 中添加
 
 ````markdown
 ```mermaid
@@ -106,7 +107,8 @@ blog/post.html         文章详情页
 posts/                 中文正文，en/ 和 ja/ 下为译文
 assets/posts/<slug>/   文章图片
 assets/js/posts.js     文章元信息
-assets/js/i18n.js      三种语言的界面文案
+assets/js/i18n.js      三种语言的界面文案、语言切换、手机端导航、标签链接
+assets/js/post.js      文章详情页的正文渲染、目录和代码高亮
 assets/js/giscus.js    Giscus 评论配置
 assets/css/site.css    全站样式
 assets/icons/          头像、站点图标和社交图标
