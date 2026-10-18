@@ -35,6 +35,7 @@ The post page uses `marked` and `DOMPurify` from CDN, with post-processing for:
 - KaTeX math
 - Code highlighting with highlight.js: fenced language first, otherwise the language mapped from the post's Chinese tags in `CODE_LANGUAGE_HINTS` (`assets/js/post.js`), otherwise auto-detection with a relevance threshold
 - Table of contents from `h2`, `h3`, and `h4`
+- Scrolling to the heading in the URL hash after the post renders
 - Previous / next post navigation
 
 ## Local Preview
