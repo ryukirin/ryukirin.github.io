@@ -35,6 +35,7 @@
     buildTableOfContents(ui);
     const sourceTags = window.BLOG_POSTS.find((post) => post.slug === slug)?.tags || [];
     await renderEnhancements(codeLanguagesForTags(sourceTags));
+    scrollToHash();
   } catch (error) {
     document.querySelector("#post-body").innerHTML = `
       <p>${escapeHtml(ui.loadingError)}</p>
@@ -90,6 +91,33 @@ function buildTableOfContents(ui) {
       )}</a>`;
     })
     .join("");
+}
+
+function scrollToHash() {
+  let id;
+  try {
+    id = decodeURIComponent(window.location.hash.slice(1));
+  } catch {
+    return;
+  }
+  const target = id && document.getElementById(id);
+  if (!target) return;
+
+  target.scrollIntoView();
+  const scrolledTo = window.scrollY;
+  const pendingImages = [...document.querySelectorAll("#post-body img")].filter((img) => !img.complete);
+  if (!pendingImages.length) return;
+
+  Promise.all(pendingImages.map(waitForImage)).then(() => {
+    if (Math.abs(window.scrollY - scrolledTo) < 2) target.scrollIntoView();
+  });
+}
+
+function waitForImage(img) {
+  return new Promise((resolve) => {
+    img.addEventListener("load", resolve, { once: true });
+    img.addEventListener("error", resolve, { once: true });
+  });
 }
 
 function slugify(value) {

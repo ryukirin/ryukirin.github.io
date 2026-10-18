@@ -677,6 +677,7 @@ a.tag:focus-visible {
 .markdown-body h4 {
   line-height: 1.25;
   margin: 1.4em 0 0.6em;
+  scroll-margin-top: 88px;
 }
 
 .markdown-body h3 {
