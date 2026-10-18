@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261018",
+    "title": "deepagents-in-action打卡记录-Task3",
+    "description": "Datawhale deepagents-in-action 课程 Task3 打卡记录，整理第四章任务规划与分解：todo 的三种状态和持久化，Node-style 与 Wrap-style 两类 Hook，默认中间件、通过参数配置和通过 middleware=[...] 配置的中间件，以及 PatchToolCallsMiddleware、TodoListMiddleware 和 SummarizationMiddleware 的工作方式。",
+    "date": "2026-10-18T20:02:00+09:00",
+    "tags": [
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task3",
+        "description": "Task 3 notes for the Datawhale deepagents-in-action course on Chapter 4, task planning and decomposition: the three todo states and persisting the list, Node-style and Wrap-style hooks, default middleware, middleware configured by parameters and by middleware=[...], and how PatchToolCallsMiddleware, TodoListMiddleware, and SummarizationMiddleware work.",
+        "tags": [
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task3",
+        "description": "Datawhale deepagents-in-action コースの Task3 学習記録。第 4 章のタスクの計画と分解について、todo の 3 つの状態とリストの永続化、Node-style と Wrap-style の 2 種類の Hook、デフォルトのミドルウェア、パラメータや middleware=[...] で設定するミドルウェア、PatchToolCallsMiddleware・TodoListMiddleware・SummarizationMiddleware の仕組みを整理する。",
+        "tags": [
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261014",
     "title": "deepagents-in-action打卡记录-Task2",
     "description": "Datawhale deepagents-in-action 课程 Task2 打卡记录，整理第三章 Context Engineering：七个文件工具，长结果写入虚拟文件系统和历史对话压缩，StateBackend、FilesystemBackend、LocalShellBackend、StoreBackend、CompositeBackend 和沙箱后端，以及 FilesystemPermission、自定义后端和 PolicyWrapper 安全策略。",
