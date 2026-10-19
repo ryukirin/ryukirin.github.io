@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261019",
+    "title": "deepagents-in-action打卡记录-Task4",
+    "description": "Datawhale deepagents-in-action 课程 Task4 打卡记录。整理第五章子 Agent 的定义、配置继承规则、general-purpose 子 Agent 的禁用和覆盖、CompiledSubAgent、多子 Agent 协作和结构化输出，并把 AI 新闻助理的收集、查重、比对历史、写报告拆给四个子 Agent。",
+    "date": "2026-10-19T23:51:00+09:00",
+    "tags": [
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task4",
+        "description": "Task 4 notes for the Datawhale deepagents-in-action course on Chapter 5: defining subagents, which settings they inherit, disabling and overriding the general-purpose subagent, CompiledSubAgent, multi-subagent collaboration, and structured output, plus splitting the AI news assistant into four subagents for collecting, deduplicating, checking history, and writing the report.",
+        "tags": [
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task4",
+        "description": "Datawhale deepagents-in-action コースの Task4 学習記録。第 5 章のサブ Agent の定義、設定の継承ルール、general-purpose サブ Agent の無効化と上書き、CompiledSubAgent、複数サブ Agent の協調、構造化出力を整理し、AI ニュースアシスタントの収集、重複チェック、履歴との照合、レポート作成を 4 つのサブ Agent に分けた。",
+        "tags": [
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261018",
     "title": "deepagents-in-action打卡记录-Task3",
     "description": "Datawhale deepagents-in-action 课程 Task3 打卡记录，整理第四章任务规划与分解：todo 的三种状态和持久化，Node-style 与 Wrap-style 两类 Hook，默认中间件、通过参数配置和通过 middleware=[...] 配置的中间件，以及 PatchToolCallsMiddleware、TodoListMiddleware 和 SummarizationMiddleware 的工作方式。",
