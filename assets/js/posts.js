@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261021",
+    "title": "deepagents-in-action打卡记录-Task5",
+    "description": "Datawhale deepagents-in-action 课程 Task5 打卡记录。整理第七章 Skills 的目录结构、SKILL.md 的写法、渐进式加载、多源优先级、三种 Backend 的加载方式和权限控制，并把 AI 新闻助理的查重和旧闻比对规则写成两个只读 Skill，交给对应的子 Agent。",
+    "date": "2026-10-21T21:07:00+09:00",
+    "tags": [
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task5",
+        "description": "Task 5 notes for the Datawhale deepagents-in-action course on Chapter 7, skills: directory structure, writing SKILL.md, progressive disclosure, precedence across sources, loading through three backends, and permissions, plus moving the AI news assistant's deduplication and past-news rules into two read-only skills for the matching subagents.",
+        "tags": [
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task5",
+        "description": "Datawhale deepagents-in-action コースの Task5 学習記録。第 7 章 Skills のディレクトリ構成、SKILL.md の書き方、段階的な読み込み、複数ソースの優先順位、3 種類の Backend での読み込み、権限管理を整理し、AI ニュースアシスタントの重複チェックと過去ニュース照合のルールを 2 つの読み取り専用 Skill にまとめて、対応するサブ Agent に渡した。",
+        "tags": [
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261019",
     "title": "deepagents-in-action打卡记录-Task4",
     "description": "Datawhale deepagents-in-action 课程 Task4 打卡记录。整理第五章子 Agent 的定义、配置继承规则、general-purpose 子 Agent 的禁用和覆盖、CompiledSubAgent、多子 Agent 协作和结构化输出，并把 AI 新闻助理的收集、查重、比对历史、写报告拆给四个子 Agent。",
