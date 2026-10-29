@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261024",
+    "title": "deepagents-in-action打卡记录-Task6",
+    "description": "Datawhale deepagents-in-action 课程 Task6 打卡记录。整理第八章长期记忆的 Checkpointer、自定义 State、namespace 划分和 Store 的选型，以及第九章 Human-in-the-Loop 的中断配置、条件中断和恢复方式，并给 AI 新闻助理加上按用户划分的存储、长期记忆和写入前的人工审批。",
+    "date": "2026-10-26T23:38:00+09:00",
+    "tags": [
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task6",
+        "description": "Task 6 notes for the Datawhale deepagents-in-action course on Chapter 8, long-term memory (checkpointers, custom state, namespaces, and choosing a Store), and Chapter 9, human-in-the-loop (interrupt configuration, conditional interrupts, and resuming), plus per-user storage, long-term memory, and approval before writes for the AI news assistant.",
+        "tags": [
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task6",
+        "description": "Datawhale deepagents-in-action コースの Task6 学習記録。第 8 章 長期記憶の Checkpointer、State のカスタマイズ、namespace の分け方、Store の選び方と、第 9 章 Human-in-the-Loop の中断の設定、条件付きの中断、再開の方法を整理し、AI ニュースアシスタントにユーザーごとのストレージ、長期記憶、書き込み前の人による承認を加えた。",
+        "tags": [
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261021",
     "title": "deepagents-in-action打卡记录-Task5",
     "description": "Datawhale deepagents-in-action 课程 Task5 打卡记录。整理第七章 Skills 的目录结构、SKILL.md 的写法、渐进式加载、多源优先级、三种 Backend 的加载方式和权限控制，并把 AI 新闻助理的查重和旧闻比对规则写成两个只读 Skill，交给对应的子 Agent。",
