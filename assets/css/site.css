@@ -612,7 +612,12 @@ a.tag:focus-visible {
   max-height: calc(100vh - 120px);
   overflow-y: auto;
   position: sticky;
+  scrollbar-width: none;
   top: 96px;
+}
+
+.article-toc::-webkit-scrollbar {
+  display: none;
 }
 
 .article-toc__inner {
@@ -746,7 +751,7 @@ a.tag:focus-visible {
   border-radius: 8px;
   color: #f9fafb;
   overflow-x: auto;
-  padding: 1rem;
+  padding: 1rem 1.5rem;
 }
 
 .markdown-body pre code {
