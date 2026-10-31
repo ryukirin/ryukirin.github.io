@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261031",
+    "title": "deepagents-in-action打卡记录-Task7",
+    "description": "Datawhale deepagents-in-action 课程 Task7 打卡记录。整理第十三章 Grading Rubrics 的角色分工、RubricMiddleware 的运行状态机、配置和调用方式，以及 RubricEvaluation 的字段和各评审结论的含义。",
+    "date": "2026-11-01T00:06:00+09:00",
+    "tags": [
+      "Deep Agents实战|Datawhale-10月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "deepagents-in-action Study Log - Task7",
+        "description": "Task 7 notes for the Datawhale deepagents-in-action course on Chapter 13, grading rubrics: the role of each component, the RubricMiddleware runtime state machine, configuration and invocation, the RubricEvaluation fields, and what each verdict means.",
+        "tags": [
+          "Deep Agents in Action | Datawhale October",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "deepagents-in-action 学習記録 - Task7",
+        "description": "Datawhale deepagents-in-action コースの Task7 学習記録。第 13 章 Grading Rubrics の役割分担、RubricMiddleware の実行時の状態機械、設定と呼び出しの方法、RubricEvaluation のフィールドと各結論の意味を整理した。",
+        "tags": [
+          "Deep Agents 実戦|Datawhale 10月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261024",
     "title": "deepagents-in-action打卡记录-Task6",
     "description": "Datawhale deepagents-in-action 课程 Task6 打卡记录。整理第八章长期记忆的 Checkpointer、自定义 State、namespace 划分和 Store 的选型，以及第九章 Human-in-the-Loop 的中断配置、条件中断和恢复方式，并给 AI 新闻助理加上按用户划分的存储、长期记忆和写入前的人工审批。",
