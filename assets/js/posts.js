@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261116",
+    "title": "Hello Agents 进阶篇打卡记录-Task0",
+    "description": "Datawhale Hello Agents 进阶篇 Task0 打卡记录。记录虚拟环境和依赖包的安装、用 .env 管理 Tavily 和 LLM 的 API Key，以及第一章智能旅行助手和第四章 ReAct Agent 的运行结果。",
+    "date": "2026-11-16T21:50:00+09:00",
+    "tags": [
+      "Hello Agents进阶篇|Datawhale-11月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "Hello Agents Advanced Study Log - Task0",
+        "description": "Task 0 notes for the Datawhale Hello Agents advanced course: installing the virtual environment and dependencies, managing the Tavily and LLM API keys with .env, and the run output of the Chapter 1 travel assistant and the Chapter 4 ReAct agent.",
+        "tags": [
+          "Hello Agents Advanced | Datawhale November",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Hello Agents 応用編 学習記録 - Task0",
+        "description": "Datawhale Hello Agents 応用編の Task0 学習記録。仮想環境と依存パッケージのインストール、.env による Tavily と LLM の API キー管理、第 1 章の旅行アシスタントと第 4 章の ReAct Agent の実行結果を記録した。",
+        "tags": [
+          "Hello Agents 応用編|Datawhale 11月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261031",
     "title": "deepagents-in-action打卡记录-Task7",
     "description": "Datawhale deepagents-in-action 课程 Task7 打卡记录。整理第十三章 Grading Rubrics 的角色分工、RubricMiddleware 的运行状态机、配置和调用方式，以及 RubricEvaluation 的字段和各评审结论的含义。",
