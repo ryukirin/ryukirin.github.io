@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261116-2",
+    "title": "Hello Agents 进阶篇打卡记录-Task1",
+    "description": "Datawhale Hello Agents 进阶篇 Task1 打卡记录。整理第四章 ReAct、Plan-and-Solve 和 Reflection 三种范式的流程、适用场景和局限性，以及章后习题的作答（部分未完成）。",
+    "date": "2026-11-17T23:59:00+09:00",
+    "tags": [
+      "Hello Agents进阶篇|Datawhale-11月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "Hello Agents Advanced Study Log - Task1",
+        "description": "Task 1 notes for the Datawhale Hello Agents advanced course on Chapter 4: how the ReAct, Plan-and-Solve, and Reflection paradigms work, their use cases and limitations, and answers to the end-of-chapter exercises (some still unfinished).",
+        "tags": [
+          "Hello Agents Advanced | Datawhale November",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Hello Agents 応用編 学習記録 - Task1",
+        "description": "Datawhale Hello Agents 応用編の Task1 学習記録。第 4 章の ReAct、Plan-and-Solve、Reflection の 3 つのパラダイムの流れ、適した場面と制約、章末の練習問題の解答（一部未完成）をまとめた。",
+        "tags": [
+          "Hello Agents 応用編|Datawhale 11月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261116",
     "title": "Hello Agents 进阶篇打卡记录-Task0",
     "description": "Datawhale Hello Agents 进阶篇 Task0 打卡记录。记录虚拟环境和依赖包的安装、用 .env 管理 Tavily 和 LLM 的 API Key，以及第一章智能旅行助手和第四章 ReAct Agent 的运行结果。",
