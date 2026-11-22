@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261119",
+    "title": "Hello Agents 进阶篇打卡记录-Task2",
+    "description": "Datawhale Hello Agents 进阶篇 Task2 打卡记录。整理第七章 HelloAgentsLLM 的多服务商支持和自动检测机制、Message、Config 和 Agent 基类、Agent 范式的框架化和工具系统，以及章后习题的作答，含 Gemini 接入、带质量评分的 ReflectionAgent、Tree-of-Thought Agent、本地推理框架对比和插件系统设计。",
+    "date": "2026-11-22T22:04:00+09:00",
+    "tags": [
+      "Hello Agents进阶篇|Datawhale-11月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "Hello Agents Advanced Study Log - Task2",
+        "description": "Task 2 notes for the Datawhale Hello Agents advanced course on Chapter 7: multi-provider support and automatic detection in HelloAgentsLLM, the Message, Config, and Agent base classes, framework-based agent paradigms, and the tool system, plus answers to the end-of-chapter exercises, including a Gemini provider, a ReflectionAgent with quality scoring, a Tree-of-Thought agent, a comparison of local inference frameworks, and a plugin system design.",
+        "tags": [
+          "Hello Agents Advanced | Datawhale November",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Hello Agents 応用編 学習記録 - Task2",
+        "description": "Datawhale Hello Agents 応用編の Task2 学習記録。第 7 章の HelloAgentsLLM の複数プロバイダー対応と自動検出、Message・Config・Agent 基底クラス、Agent パラダイムのフレームワーク化、ツールシステムを整理し、章末の練習問題の解答をまとめた。Gemini への対応、品質スコア付きの ReflectionAgent、Tree-of-Thought Agent、ローカル推論フレームワークの比較、プラグインシステムの設計を含む。",
+        "tags": [
+          "Hello Agents 応用編|Datawhale 11月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261116-2",
     "title": "Hello Agents 进阶篇打卡记录-Task1",
     "description": "Datawhale Hello Agents 进阶篇 Task1 打卡记录。整理第四章 ReAct、Plan-and-Solve 和 Reflection 三种范式的流程、适用场景和局限性，以及章后习题的作答，含计算器工具、JSON 输出解析和 few-shot 的实践。",
