@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261122",
+    "title": "Hello Agents 进阶篇打卡记录-Task3",
+    "description": "Datawhale Hello Agents 进阶篇 Task3 打卡记录。整理第八章 HelloAgents 记忆系统的添加、检索、管理操作和四种记忆类型的评分公式，RAG 系统的文档处理、智能分块和 MQE、HyDE 两种高级检索策略，以及智能文档问答助手的运行结果和章后习题的作答（动手实践题未完成），含三种嵌入方案的对比和多用户数据隔离的设计。",
+    "date": "2026-11-25T20:30:00+09:00",
+    "tags": [
+      "Hello Agents进阶篇|Datawhale-11月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "Hello Agents Advanced Study Log - Task3",
+        "description": "Task 3 notes for the Datawhale Hello Agents advanced course on Chapter 8: adding, searching, and managing memories in the HelloAgents memory system and the scoring formulas of its four memory types, document processing, intelligent chunking, and the MQE and HyDE retrieval strategies in the RAG system, and the results of the intelligent document Q&A assistant, plus answers to the end-of-chapter exercises (the hands-on ones are unfinished), including a comparison of three embedding options and a multi-user data isolation design.",
+        "tags": [
+          "Hello Agents Advanced | Datawhale November",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Hello Agents 応用編 学習記録 - Task3",
+        "description": "Datawhale Hello Agents 応用編の Task3 学習記録。第 8 章の HelloAgents 記憶システムの追加・検索・管理の操作と 4 種類の記憶のスコアの式、RAG システムの文書処理、インテリジェントなチャンク分割、MQE と HyDE の 2 つの高度な検索戦略を整理し、インテリジェントな文書 Q&A アシスタントの実行結果と章末の練習問題の解答（実践問題は未完成）をまとめた。3 つの埋め込み方式の比較とマルチユーザーのデータ分離の設計を含む。",
+        "tags": [
+          "Hello Agents 応用編|Datawhale 11月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261119",
     "title": "Hello Agents 进阶篇打卡记录-Task2",
     "description": "Datawhale Hello Agents 进阶篇 Task2 打卡记录。整理第七章 HelloAgentsLLM 的多服务商支持和自动检测机制、Message、Config 和 Agent 基类、Agent 范式的框架化和工具系统，以及章后习题的作答，含 Gemini 接入、带质量评分的 ReflectionAgent、Tree-of-Thought Agent、本地推理框架对比和插件系统设计。",
