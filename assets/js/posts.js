@@ -1,5 +1,36 @@
 window.BLOG_POSTS = [
   {
+    "slug": "cnblogs-20261125",
+    "title": "Hello Agents 进阶篇打卡记录-Task4",
+    "description": "Datawhale Hello Agents 进阶篇 Task4 打卡记录。整理第九章上下文工程的笔记，包括上下文腐蚀、即时上下文和渐进式披露、长时程任务的三种策略，ContextBuilder 的 GSSC 流水线，NoteTool 和 TerminalTool 的设计，以及代码库维护助手的流程，并作答章后习题（动手实践题未完成）。",
+    "date": "2026-11-29T00:50:00+09:00",
+    "tags": [
+      "Hello Agents进阶篇|Datawhale-11月",
+      "LLM",
+      "Datawhale"
+    ],
+    "translations": {
+      "en": {
+        "title": "Hello Agents Advanced Study Log - Task4",
+        "description": "Task 4 notes for the Datawhale Hello Agents advanced course on Chapter 9, context engineering: context rot, just-in-time context and progressive disclosure, three strategies for long-horizon tasks, the GSSC pipeline in ContextBuilder, the design of NoteTool and TerminalTool, and the flow of the codebase maintenance assistant, plus answers to the end-of-chapter exercises (the hands-on ones are unfinished).",
+        "tags": [
+          "Hello Agents Advanced | Datawhale November",
+          "LLM",
+          "Datawhale"
+        ]
+      },
+      "ja": {
+        "title": "Hello Agents 応用編 学習記録 - Task4",
+        "description": "Datawhale Hello Agents 応用編の Task4 学習記録。第 9 章のコンテキストエンジニアリングについて、コンテキストの劣化、ジャストインタイムのコンテキストと段階的な開示、長時間タスクのための 3 つの戦略、ContextBuilder の GSSC パイプライン、NoteTool と TerminalTool の設計、コードベース保守アシスタントの流れを整理し、章末の練習問題の解答（実践問題は未完成）をまとめた。",
+        "tags": [
+          "Hello Agents 応用編|Datawhale 11月",
+          "LLM",
+          "Datawhale"
+        ]
+      }
+    }
+  },
+  {
     "slug": "cnblogs-20261122",
     "title": "Hello Agents 进阶篇打卡记录-Task3",
     "description": "Datawhale Hello Agents 进阶篇 Task3 打卡记录。整理第八章 HelloAgents 记忆系统的添加、检索、管理操作和四种记忆类型的评分公式，RAG 系统的文档处理、智能分块和 MQE、HyDE 两种高级检索策略，以及智能文档问答助手的运行结果和章后习题的作答（动手实践题未完成），含三种嵌入方案的对比和多用户数据隔离的设计。",
